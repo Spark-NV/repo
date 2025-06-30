@@ -73,10 +73,13 @@ def main():
                 if addon_info:
                     addons_info.append(addon_info)
                     
+                    zip_subdir = os.path.join(zips_dir, addon_info['id'])
+                    os.makedirs(zip_subdir, exist_ok=True)
+
                     zip_filename = f"{addon_info['id']}-{addon_info['version']}.zip"
-                    zip_path = os.path.join(zips_dir, zip_filename)
+                    zip_path = os.path.join(zip_subdir, zip_filename)
                     create_addon_zip(addon_path, zip_path)
-                    print(f"Created zip: {zip_filename}")
+                    print(f"Created zip: {zip_path}")
     
     addons_xml_content = generate_addons_xml(addons_info)
     addons_xml_path = 'repo/addons.xml'
