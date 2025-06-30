@@ -2,6 +2,7 @@
 import os
 import hashlib
 import zipfile
+import shutil
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -13,6 +14,7 @@ def create_addon_zip(addon_path, zip_path):
                 file_path = os.path.join(root, file)
                 arcname = os.path.relpath(file_path, addon_path)
                 zipf.write(file_path, arcname)
+                
 
 def get_addon_info(addon_path):
     """Extract addon information from addon.xml"""
@@ -80,6 +82,11 @@ def main():
                     zip_path = os.path.join(zip_subdir, zip_filename)
                     create_addon_zip(addon_path, zip_path)
                     print(f"Created zip: {zip_path}")
+                    for extra_file in ['icon.png', 'fanart.jpg', 'changelog.txt']:
+                        src_file = os.path.join(addon_path, extra_file)
+                        if os.path.exists(src_file):
+                            shutil.copy2(src_file, zip_subdir)
+                            print(f"Copied {extra_file} to {zip_subdir}")
     
     addons_xml_content = generate_addons_xml(addons_info)
     addons_xml_path = 'repo/addons.xml'
