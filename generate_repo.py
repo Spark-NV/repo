@@ -23,7 +23,6 @@ def get_addon_info(addon_path):
     tree = ET.parse(addon_xml)
     root = tree.getroot()
     
-    # Get basic info
     addon_id = root.get('id')
     name = root.get('name')
     version = root.get('version')
@@ -50,7 +49,6 @@ def generate_addons_xml(addons_info):
         with open(addon_xml_path, 'r', encoding='utf-8') as f:
             addon_xml_content = f.read()
         
-        # Remove the XML declaration and add the addon content
         addon_xml_content = addon_xml_content.replace('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>', '')
         addon_xml_content = addon_xml_content.replace('<?xml version="1.0" encoding="UTF-8"?>', '')
         addon_xml_content = addon_xml_content.strip()
@@ -61,29 +59,25 @@ def generate_addons_xml(addons_info):
     return xml_content
 
 def main():
-    # Create zips directory if it doesn't exist
     zips_dir = 'repo/zips'
     os.makedirs(zips_dir, exist_ok=True)
     
-    # Get all addons from Matrix directory
-    matrix_dir = 'Matrix'
+    source_dir = 'Omega'
     addons_info = []
     
-    if os.path.exists(matrix_dir):
-        for addon_dir in os.listdir(matrix_dir):
-            addon_path = os.path.join(matrix_dir, addon_dir)
+    if os.path.exists(source_dir):
+        for addon_dir in os.listdir(source_dir):
+            addon_path = os.path.join(source_dir, addon_dir)
             if os.path.isdir(addon_path):
                 addon_info = get_addon_info(addon_path)
                 if addon_info:
                     addons_info.append(addon_info)
                     
-                    # Create zip file
                     zip_filename = f"{addon_info['id']}-{addon_info['version']}.zip"
                     zip_path = os.path.join(zips_dir, zip_filename)
                     create_addon_zip(addon_path, zip_path)
                     print(f"Created zip: {zip_filename}")
     
-    # Generate addons.xml
     addons_xml_content = generate_addons_xml(addons_info)
     addons_xml_path = 'repo/addons.xml'
     
@@ -92,7 +86,6 @@ def main():
     
     print(f"Generated: {addons_xml_path}")
     
-    # Generate addons.xml.md5
     md5_hash = hashlib.md5(addons_xml_content.encode('utf-8')).hexdigest()
     md5_path = 'repo/addons.xml.md5'
     
