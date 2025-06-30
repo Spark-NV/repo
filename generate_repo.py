@@ -6,15 +6,14 @@ import shutil
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-def create_addon_zip(addon_path, zip_path):
-    """Create a zip file for an addon"""
-    with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
+def create_addon_zip(addon_path, zip_path, addon_id):
+    with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as z:
         for root, dirs, files in os.walk(addon_path):
             for file in files:
                 file_path = os.path.join(root, file)
-                arcname = os.path.relpath(file_path, addon_path)
-                zipf.write(file_path, arcname)
-                
+                rel_path = os.path.relpath(file_path, addon_path)
+                zip_entry = os.path.join(addon_id, rel_path)
+                z.write(file_path, zip_entry)
 
 def get_addon_info(addon_path):
     """Extract addon information from addon.xml"""
@@ -80,7 +79,7 @@ def main():
 
                     zip_filename = f"{addon_info['id']}-{addon_info['version']}.zip"
                     zip_path = os.path.join(zip_subdir, zip_filename)
-                    create_addon_zip(addon_path, zip_path)
+                    create_addon_zip(addon_path, zip_path, addon_info['id'])
                     print(f"Created zip: {zip_path}")
                     for extra_file in ['icon.png', 'fanart.jpg', 'changelog.txt']:
                         src_file = os.path.join(addon_path, extra_file)
