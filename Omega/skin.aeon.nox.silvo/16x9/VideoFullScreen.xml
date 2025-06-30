@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol />
+	<onunload>ClearProperty(Playing.StartupIntro,Home)</onunload>
+	<controls>
+		<control type="label" id="1">
+			<left>60</left>
+			<top>60</top>
+			<width>915</width>
+			<height>60</height>
+			<label>$INFO[Player.SeekNumeric(hh:mm:ss)]</label>
+			<font>font_MainMenu</font>
+			<shadowcolor>black</shadowcolor>
+		</control>
+		<control type="group" id="0">
+			<control type="label" id="10">
+				<description>row 1 label</description>
+				<left>45</left>
+				<top>15</top>
+				<width>1770</width>
+				<height>100</height>
+				<font>font14</font>
+				<textcolor>grey2</textcolor>
+				<shadowcolor>shadow</shadowcolor>
+				<label />
+			</control>
+			<control type="label" id="11">
+				<description>row 2 label</description>
+				<left>45</left>
+				<top>45</top>
+				<width>1770</width>
+				<height>100</height>
+				<font>font14</font>
+				<label />
+				<textcolor>grey2</textcolor>
+				<shadowcolor>shadow</shadowcolor>
+			</control>
+			<control type="label" id="12">
+				<description>row 3 label</description>
+				<left>45</left>
+				<top>75</top>
+				<width>1770</width>
+				<height>100</height>
+				<font>font14</font>
+				<label />
+				<textcolor>grey2</textcolor>
+				<shadowcolor>shadow</shadowcolor>
+			</control>
+		</control>
+	</controls>
+</window>
