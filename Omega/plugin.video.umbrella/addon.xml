@@ -1,8 +1,7 @@
-<addon id="plugin.video.umbrella" name="Lumina" provider-name="Lumina" version="96.7.46">
+<addon id="plugin.video.umbrella" name="Umbrella" provider-name="Umbrella" version="6.7.46">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.requests" />
-		<import addon="script.module.cocoscrapers" />
 		<import addon="plugin.video.youtube" optional="true" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="umbrella.py">
@@ -200,6 +199,10 @@
 		<disclaimer lang="en">The author of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
 		<assets>
 			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot003.jpg</screenshot>
 		</assets>
 		<news>
 [B]Update - v6.7.46 - June 16th, 2025[/B]
