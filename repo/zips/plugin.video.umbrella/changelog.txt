@@ -1,0 +1,5 @@
+[B]Update - v6.7.46 - June 16th, 2025[/B]
+--[Change] Modified MDBList add and remove to only use watchlist and static lists.
+--[Change] Suggested library change from PR request.
+--[Fix] Fixed issue with mdblists and tv shows.
+--[Fix] Made changes to mdblist api url used for lists and fixed ai generated lists not working.

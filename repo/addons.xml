@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="skin.amber" version="91.0.00" name="Amber" provider-name="bsoriano, Jester, Joethepartylion, Pecinko">
+	<requires>
+		<import addon="xbmc.gui" version="5.17.0"/>
+		<import addon="script.favourites" version="7.1.1"/>
+		<import addon="resource.uisounds.amber" version="1.0.0"/>
+		<import addon="script.skinshortcuts" version="1.0.17"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
+		<forum>https://forum.kodi.tv/forumdisplay.php?fid=203</forum>
+		<source>https://github.com/bartolomesoriano/skin.amber</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot01.jpg</screenshot>
+			<screenshot>resources/screenshot02.jpg</screenshot>
+			<screenshot>resources/screenshot03.jpg</screenshot>
+			<screenshot>resources/screenshot04.jpg</screenshot>
+			<screenshot>resources/screenshot05.jpg</screenshot>
+			<screenshot>resources/screenshot06.jpg</screenshot>
+			<screenshot>resources/screenshot07.jpg</screenshot>
+			<screenshot>resources/screenshot08.jpg</screenshot>
+			<screenshot>resources/screenshot09.jpg</screenshot>
+			<screenshot>resources/screenshot10.jpg</screenshot>
+		</assets>
+		<news>3.99.02
+			- Is official
+		</news>
+		<summary lang="ca_ES">Sense bloatware, només els fitxers multimèdia amb una interfície fàcil de navegar</summary>
+		<summary lang="da_DK">Ingen bloatware, kun dine medier med en brugerflade der er let at navigere</summary>
+		<summary lang="de_DE">Keine Bloatware, nur Ihre Medien mit einer leicht zu navigierenden Oberfläche</summary>
+		<summary lang="en_AU">No bloatware, just your media with an easy to navigate interface</summary>
+		<summary lang="en_GB">No bloatware, just your media with an easy to navigate interface</summary>
+		<summary lang="en_NZ">No bloatware, just your media with an easy to navigate interface</summary>
+		<summary lang="en_US">No bloatware, just your media with an easy to navigate interface</summary>
+		<summary lang="es_ES">Sin excesos, solo su contenido con una interfaz fácil de navegar</summary>
+		<summary lang="es_MX">Nada de bloatware, solo tu multimedia con una interfaz fácil de navegar</summary>
+		<summary lang="et_EE">Ei midagi üleliigset, ainult sinu meedium koos hõlpsasti navigeeritava liidesega</summary>
+		<summary lang="fi_FI">Vain helppokäyttöinen käyttöliittymä mediakirjastollesi ilman turhia ominaisuuksia</summary>
+		<summary lang="fr_CA">Pas d’inflagiciel, juste vos médias avec une interface facile à parcourir</summary>
+		<summary lang="fr_FR">Pas d&apos;usine à gaz, juste les médias avec une interface épurée</summary>
+		<summary lang="is_IS">Alls ekki óþarfa prjál, heldur bara margmiðlunarefnið þitt með einföldu viðmóti</summary>
+		<summary lang="it_IT">Nessun bloatware, solo i tuoi file multimediali con un&apos;interfaccia facile da navigare</summary>
+		<summary lang="nl_NL">Geen bloatware, alleen jouw media in een makkelijk te navigeren omgeving</summary>
+		<summary lang="pt_BR">Sem bloatware, apenas sua mídia com uma interface fácil de navegar</summary>
+		<summary lang="ru_RU">Никакого вредоносного ПО, только ваши медиафайлы с удобным интерфейсом</summary>
+		<summary lang="zh_CN">没有臃肿的软件，只有你的媒体和一个易于导航的界面</summary>
+		<description lang="ca_ES">Sense bloatware, només els fitxers multimèdia amb una interfície fàcil de navegar.[CR]Utilitza algunes textures d&apos;skins Mediastream i Aeon.</description>
+		<description lang="de_DE">Keine Bloatware, nur Ihre Medien mit einer einfach zu navigierenden Oberfläche.[CR]Benutzt Texturen aus den Mediastream und Aeon skins.</description>
+		<description lang="en_AU">No bloatware, just your media with an easy to navigate interface.[CR]Uses some textures from Mediastream and Aeon skins.</description>
+		<description lang="en_GB">No bloatware, just your media with an easy to navigate interface.[CR]Uses some textures from Mediastream and Aeon skins.</description>
+		<description lang="en_NZ">No bloatware, just your media with an easy to navigate interface.[CR]Uses some textures from Mediastream and Aeon skins.</description>
+		<description lang="en_US">No bloatware, just your media with an easy to navigate interface.[CR]Uses some textures from Mediastream and Aeon skins.</description>
+		<description lang="es_ES">Sin excesos, sólo su contenido con una interfaz fácil de navegar.[CR]Utiliza algunas texturas de los skins Mediastream y Aeon.</description>
+		<description lang="es_MX">Nada de bloatware, solo tu multimedia con una interfaz fácil de navegar.[CR]Utiliza algunas texturas de las máscaras Mediastream y Aeon.</description>
+		<description lang="et_EE">Ei midagi üleliigset, ainult sinu meedium koos hõlpsasti navigeeritava liidesega.[CR]Kasutab mõnda Mediastream ja Aeon rüü tekstuuri.</description>
+		<description lang="fi_FI">Vain helppokäyttöinen käyttöliittymä mediakirjastollesi ilman turhia ominaisuuksia. [CR]Käyttää jonkin verran kuvamateriaalia Mediastream- ja Aeon-ulkoasuista.</description>
+		<description lang="fr_CA">Pas d’inflagiciel, juste vos médias avec une interface facile à parcourir.[CR]Utilise des textures des habillages Mediastream et Aeon.</description>
+		<description lang="fr_FR">Pas d&apos;utilisation excessive des ressources, juste vos médias avec une interface facile à utiliser.[CR]Utilise quelques textures provenant des habillages Mediastream et Aeon.</description>
+		<description lang="is_IS">Alls ekki óþarfa prjál, heldur bara margmiðlunarefnið þitt með einföldu viðmóti.[CR]Notar ýmsar áferðir úr Mediastream og Aeon skinnunum.</description>
+		<description lang="it_IT">Nessun bloatware, solo i tuoi file multimediali con un&apos;interfaccia facile da navigare.[CR]Usa alcune texture delle skin Mediastream e Aeon.</description>
+		<description lang="nl_NL">Geen bloatware, alleen jouw media met een makkelijk te navigeren interface.[CR]Gebruikt sommige texturen van de Mediastream- en Aeonontwerpen.</description>
+		<description lang="pt_BR">Sem excessos, apenas a sua mídia com uma interface fácil de navegar. [CR]Utiliza algumas texturas das skins Mediastream e Aeon.</description>
+		<description lang="pt_PT">Um tema sem excessos que apenas mostra a sua média com uma interface de navegação simples.[CR]Utiliza algumas texturas dos temas Mediastream e Aeon.</description>
+		<description lang="ru_RU">Никаких вредоносных программ, только ваши носители с удобным интерфейсом навигации.[CR] Использует некоторые текстуры из скинов Mediastream и Aeon.</description>
+		<description lang="zh_CN">没有臃肿的软件，只有你的媒体和一个易于导航的界面。[CR]使用了 Mediastream 和 Aeon 皮肤的一些纹理。</description>
+	</extension>
+</addon>
+<addon id="script.module.cocoscrapers" name="CocoScrapers Module" version="1.0.37" provider-name="CocoJoe">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.requests" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="lib/default.py">
+		<provides>executable</provides>
+	</extension> 
+	<extension point="xbmc.service" library="lib/service.py" start="startup" />
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<reuselanguageinvoker>false</reuselanguageinvoker>
+		<summary lang="en">CocoScrapers Module</summary>
+		<description>A module that can be used to provide site scrapers.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<forum></forum>
+		<website></website>
+		<source></source>
+		<disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.png</fanart>
+			<screenshot></screenshot>
+		</assets>
+		<news></news>
+	</extension>
+</addon>
+<addon id="plugin.video.umbrella" name="Umbrella" provider-name="Umbrella" version="6.7.46">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.requests" />
+		<import addon="plugin.video.youtube" optional="true" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="umbrella.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="kodi.context.item">
+		<menu id="kodi.core.main">
+			<item library="resources\lib\context\addtoLibrary.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Add to Library</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.umbrella.addtoLibrary)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.umbrella/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\addtoFavourite.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Add/Remove Favourite</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.umbrella.addtoFavourite)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.umbrella/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\artworkCustomize.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Customize Artwork</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.umbrella.artworkCustomize)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.umbrella/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,season)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\playTrailer.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Play Trailer</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.umbrella.playTrailer)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.umbrella/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\playTrailerSelect.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Play Trailer (Select)</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.umbrella.playTrailerSelect)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.umbrella/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\traktManager.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Trakt Manager</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.umbrella.traktManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.umbrella/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,season) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\mdblistManager.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]MDBList Manager</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.umbrella.mdblistManager)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.umbrella/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\clearProviders.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Clear Providers</label>
+				<visible>
+					[!String.IsEmpty(Window(home).Property(context.umbrella.clearProviders)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.umbrella/?action=play) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]] |
+					[String.Contains(Container.FolderPath,videodb://) +
+					[String.Contains(Container.ListItem.Path,Window(home).Property(umbrella.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(umbrella.tvLib.path))] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]]
+				</visible>
+			</item>
+			<item library="resources\lib\context\clearBookmark.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Clear Item Bookmark</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.umbrella.clearBookmark)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.umbrella/?action=play) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					ListItem.IsResumable +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\rescrape.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Rescrape Item</label>
+				<visible>
+					[!String.IsEmpty(Window(home).Property(context.umbrella.rescrape)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.umbrella/?action=play) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]]
+				</visible>
+			</item>
+			<item library="resources\lib\context\libMdblistManager.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]MDBList Watchlist Lib</label>
+				<visible>
+					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
+					[String.Contains(Container.ListItem.Path,Window(home).Property(umbrella.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(umbrella.tvLib.path))] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\addLibtoFavourite.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Add/Remove Favourite</label>
+				<visible>
+					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
+					[String.Contains(Container.ListItem.Path,Window(home).Property(umbrella.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(umbrella.tvLib.path))] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\libRescrape.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Rescrape Lib Item</label>
+				<visible>
+					[String.Contains(Container.FolderPath,videodb://) | String.Contains(Container.ListItem.FolderPath,videodb://)] +
+					[String.Contains(Container.ListItem.Path,Window(home).Property(umbrella.movieLib.path)) | String.Contains(Container.ListItem.Path,Window(home).Property(umbrella.tvLib.path))] +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\playFromHere.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Play from here</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.umbrella.playFromHere)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.umbrella/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					String.IsEqual(ListItem.dbtype,episode)
+				</visible>
+			</item>
+			<item library="resources\lib\context\autoPlay.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Auto Play</label>
+				<visible>
+					String.IsEmpty(Window(home).Property(umbrella.autoPlay.enabled)) +
+					!String.IsEmpty(Window(home).Property(context.umbrella.autoPlay)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.umbrella/?action=play) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\sourceSelect.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Source Select</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(umbrella.autoPlay.enabled)) +
+					!String.IsEmpty(Window(home).Property(context.umbrella.sourceSelect)) +
+					String.StartsWith(ListItem.FolderPath,plugin://plugin.video.umbrella/?action=play) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\findSimilar.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Find Similar</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.umbrella.findSimilar)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.umbrella/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,movie)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\browseSeries.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Browse Series</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.umbrella.browseSeries)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.umbrella/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					[String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,tvshow)]
+				</visible>
+			</item>
+			<item library="resources\lib\context\browseEpisodes.py">
+				<label>$INFO[Window(home).Property(context.umbrella.showUmbrella)]Browse Episodes</label>
+				<visible>
+					!String.IsEmpty(Window(home).Property(context.umbrella.browseEpisodes)) +
+					String.StartsWith(ListItem.path,plugin://plugin.video.umbrella/) +
+					String.IsEqual(ListItem.Property(isUmbrella_widget),true) +
+					String.IsEqual(ListItem.dbtype,episode)
+				</visible>
+			</item>
+		</menu>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.python.module" library="resources/lib/" />
+	<extension point="xbmc.addon.metadata">
+		<reuselanguageinvoker>true</reuselanguageinvoker>
+		<summary lang="en">[B]Umbrella[/B] - We do not host any of the contents streamed</summary>
+		<description lang="en">[B]Umbrella[/B][CR] This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR]The author does not host any of the content in this addon and takes no responsibility for content found. We do not know anything about a lab under Raccoon City. Umbrella is not actually an umbrella and will not shield you from rain.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<forum />
+		<website>https://umbrellaplug.github.io</website>
+		<source>https://raw.githubusercontent.com/umbrellaplug/umbrellaplug.github.io/</source>
+		<disclaimer lang="en">The author of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshots/screenshot001.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot002.jpg</screenshot>
+			<screenshot>resources/screenshots/screenshot003.jpg</screenshot>
+		</assets>
+		<news>
+[B]Update - v6.7.46 - June 16th, 2025[/B]
+--[Change] Modified MDBList add and remove to only use watchlist and static lists.
+--[Change] Suggested library change from PR request.
+--[Fix] Fixed issue with mdblists and tv shows.
+--[Fix] Made changes to mdblist api url used for lists and fixed ai generated lists not working.
+		</news>
+	</extension>
+
+</addon>
+<addon id="service.subtitles.a4ksubtitles"
+       name="a4kSubtitles"
+       version="3.21.1"
+       provider-name="Unknown">
+    <requires>
+      <import addon="script.module.requests"/>
+      <import addon="vfs.libarchive" optional="true"/>
+    </requires>
+    <extension point="xbmc.subtitle.module" library="main.py"/>
+    <extension point="xbmc.service" library="main_service.py" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">a4kSubtitles - Multi-Source Subtitles Addon</summary>
+        <description>
+Multi-source subtitles addon optimized for Seren and a4kScrapers.
+Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, SubDL, Addic7ed
+        </description>
+        <platform>all</platform>
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <license>MIT License</license>
+        <website>https://github.com/newt-sc/a4kSubtitles</website>
+        <source>https://github.com/newt-sc/a4kSubtitles</source>
+        <assets>
+            <icon>icon.png</icon>
+            <screenshot>screenshot-01.png</screenshot>
+            <screenshot>screenshot-02.png</screenshot>
+            <screenshot>screenshot-03.png</screenshot>
+        </assets>
+    <news>
+[v3.21.1]:
+  * Dynamic AI subtitles translation from English to the selected Preferred Language in KODI's settings
+    * Requires API Key
+    * Currently only OpenAI and NexosAI backends are supported
+    * For NexosAI model should be specified by ID, not name
+    * Turning AI translation on - disables usage of embedded subtitles
+    * Currently only supported when using auto-search or auto-download feature
+
+[v3.20.0]:
+  * Auto download/selection improvements (by bbviking)
+
+[v3.19.1]:
+  * Parse subtitles version
+
+[v3.19.0]:
+  * Lower OpenSubtitles token cache from 7 days to 1 day
+  * Fix auto download stopping after first failed subtitle download
+  * Fix wrong language set for results when multiple languages are configured (Thanks to @peno64)
+
+[v3.18.3]:
+  * Auto Download: Fix selecting incorrect episode in archive file
+
+[v3.18.2]:
+  * SubSource: Fix foreign languages
+
+[v3.18.1]:
+  * Fix IMDB ID not found
+
+[v3.18.0]:
+  * Use the newer InfoTagVideo KODI API (contributed by @kiamvdd)
+
+[v3.17.0]:
+  * Fix: TV year being pulled incorrectly
+  * Fix: File name issues in both temp and media directories
+  * Fix: Subtitle file missing extension
+  * Fix: Incorrect episode selection when downloaded archive contains multiple subtitles
+  * Fix: Auto-download not working after the first selected episode in the playlist (A4K only works for the first media)
+  * Fix: Subtitle import issue due to "illegal characters"
+  * Improve: determination of subtitle episodes
+  * Improve: results parsing
+  * Feature: Auto-download now copies subtitles next to the video or to a custom location, based on Kodi's subtitle storage mode path
+  * SubSource: Now supports series in "absolute order", as used by some anime websites
+  * SubSource: Fixed issue of duplicated subtitle IDs with different names
+
+[v3.16.1]:
+  * Fix addons.xml.crc  
+
+[v3.16.0]:
+  * Fix subtitle international characters encoding
+  * Add SubSource
+
+[v3.15.0]:
+  * Remove Subscene
+  * Add SubDL
+
+[v3.14.0]:
+  * Handle invalid `VideoPlayer.IMDBNumber` meta
+
+[v3.13.0]:
+  * Show proper error message of wrong username for OpenSubtitles
+
+[v3.12.0]:
+  * Fix OpenSubtitles not working for titles with IMDB ID less than 1_000_000
+
+[v3.11.0]:
+  * Fix auto-selection and add debug logs.
+
+[v3.10.0]:
+  * Small fix in SDH vs Forced flags checking.
+
+[v3.9.0]:
+  * Improve SDH and Forced preferences handling.
+
+[v3.8.0]:
+  * Switch to new OpenSubtitles API.
+    Note: username and password are now mandatory for using OpenSubtitles.
+  * Fixes for Brazilian Portuguese language codes handling.
+
+[v3.7.0]:
+  * New option to auto-select and enable embedded subtitles (was previously always enabled)
+  * New option to prefer Forced subtitles on auto selection (was previously always enabled)
+  * New option to prefer SDH subtitles on auto selection
+
+[v3.6.0]:
+  * Use group of title matches in the results ordering
+
+[v3.5.0]:
+  * URI decode result names
+
+[v3.4.0]:
+  * Improve results ordering
+
+[v3.3.0]:
+  * Improve Subscene support
+
+[v3.2.0]:
+  * Option to disable subs encoding detection
+
+[v3.1.0]:
+  * Force proper embedded subs selection based on preferred language overriding KODI
+  * Subs encoding fallback to predefined list in case auto detection fails
+
+[v3.0.0]:
+  * Use cf bypass for Subscene
+  * Auto-detect subs encoding and convert to utf-8
+
+[v2.8.0]:
+  * Support tvshows with more than 250 episodes for episode id lookup when tvshow imdb id is provided.
+
+[v2.7.0]:
+  * Support tvshow imdb id, along with season and episode passed from video file url.
+
+[v2.6.0]:
+  * Support imdb id (movie or episode) passed from video file url.
+
+[v2.5.0]:
+  * Add TLS adapter fallback
+
+[v2.4.0]:
+  * Fix some ssl issues
+
+[v2.3.0]:
+  * Add concurrency error handling
+
+[v2.2.0]:
+  * Fix KODI 19 Matrix support
+
+[v2.1.0]:
+  * Fix Persian search in Subscene
+
+[v2.0.0]:
+  * Use IMDb as main source for all meta.
+  * Retry on 503 (Service Unavailable). OpenSubtitles and Subscene seems to return it occasionally.
+
+[v1.8.0]:
+  * Remove SubDb (Site is down)
+  * Make lib vfs optional since there are fallbacks and it is used as last case scenario. Thus making the addon installable on platforms which are not supported by lib vfs.
+
+[v1.7.2]:
+  * Improve results sort based on title match
+
+[v1.7.1]:
+  * Drop python meta as it prevents installations on pre Kodi 19 versions
+
+[v1.7.0]:
+  * Update python meta to enable Kodi 19 installations
+
+[v1.6.0]:
+  * Add option to auto download first subtitle result silently
+
+[v1.5.0]:
+  * Auto open search dialog only on movie and tvshow videos
+
+[v1.4.0]:
+  * Add option to auto open the search dialog when the video does not have subtitles
+
+[v1.3.0]:
+  * Improve tvshow year scraping
+
+[v1.2.0]:
+  * Use internal ZipFile for extraction with a fallback to vfs.libarchive
+
+[v1.1.0]:
+  * Improve imdb id scraping
+
+[v1.0.1]:
+  * Add screenshots
+
+[v1.0.0]:
+  * Invalidate BSPlayer results cache when download links expire
+  * Extraction fallback: zip -> gzip -> raw
+
+[v0.0.30]:
+  * Add service names in ad detection
+  * Removed the option to disable cleaning of ads
+  * Add remote fetching of addic7ed data
+
+[v0.0.29]:
+  * Fix Podnadpisi download of results missing filename meta
+  * Fix last results cache not invalidated on language preferences change
+
+[v0.0.28]:
+  * Attempt scrape of imdb id when missing
+  * Improve filename parsing
+  * Fix SubDB lang code
+  * Fix Podnadpisi not returning release name
+
+[v0.0.27]:
+  * Attempt to auto-fix a garbled cyrillic encoded subtitles
+  * Fix more encoding issues
+  * Ensure progress dialog close even if the addon crashes
+  * Apply color to service name in results and bold tags
+  * Show notification if imdb id is missing
+
+[v0.0.26]:
+  * Support for Addic7ed
+  * Improve cache of the last results
+  * Don't show progress when showing results from cache
+
+[v0.0.25]:
+  * Fix cancellation thread exit
+
+[v0.0.24]:
+  * Show progress dialog only for search
+
+[v0.0.23]:
+  * Add progress dialog
+  * Support cancellation
+
+[v0.0.22]:
+  * Fix meta string conversion issue
+
+[v0.0.21]:
+  * TVShow year scrape from imdb when necessary
+
+[v0.0.20]:
+  * Improve Subscene tvshow matching
+  * Extract first sub file from zips when none is matched
+  * Fix Podnadpisi not working properly for tvshows
+  * Fix non-ascii video file title issues
+  * Add tvshow tests
+
+[v0.0.19]:
+  * Update settings
+  * Fix language code suffix format in the subtitle file name
+  * Support for Subscene
+
+[v0.0.18]:
+  * Support for Podnadpisi.NET
+  * Support for SubDB
+
+[v0.0.17]:
+  * Reuse KODI's Python language invoker
+    * Improves performance on low-end devices when switching subtitles for best match
+  * Url decode subtitle names
+
+[v0.0.16]:
+  * Cache last result
+  * OpenSubtitles always queries:
+    * by imdb id and title
+    * by video file hash
+  * Improve results ordering:
+    * preferred lang
+    * lang
+    * synced
+    * name match
+    * rating
+    * hearing impaired
+    * subtitle service
+  * Fix url with numbers matching in ads detection
+
+[v0.0.15]:
+  * Remove ads by default
+  * Support for BSPlayer
+  * Additional option for OpenSubtitles to use file hash (Limits results to exact matches)
+
+[v0.0.14]:
+  * Fix API and normal usage at the same time
+
+[v0.0.13]:
+  * Exclude development files from release
+
+[v0.0.12]:
+  * Removal of ads (Experimental)
+  * Fix extract issue when file contains unicode symbols
+
+[v0.0.11]:
+  * Changelog in KODI
+
+[v0.0.10]:
+  * Inserted language code in sub filename
+
+[v0.0.9]:
+  * Implemented (orginal, default, none, forced_only) as KODI language setting
+  * Fixed minor bugs in API implementation
+  * Added .idea folder to .gitignore
+
+[v0.0.8]:
+  * opensubtitles should make max 2 requests for separate languages
+  * lint updates
+  * add tests for download
+
+[v0.0.7]:
+  * API class rename
+
+[v0.0.6]:
+  * fix core requiring handle even with API usage
+
+[v0.0.5]:
+  * expose API for usage without KODI
+  * add tests for search
+
+[v0.0.4]:
+  * distribution process:
+    * KODI repository with updates based on github releases
+    * addons.xml and addons.xml.crc auto generation via git hooks
+    * release automation on merge to master via Github Actions
+
+[v0.0.3]:
+  * general settings for configuring requests timeout and results limit
+  * additional ordering of the results depending on the similarity ratio of the video file name and the subtitle file name
+
+[v0.0.2]:
+  * improve archive extraction support
+  * limit the results and add requests timeout
+  * fix OpenSubtitles authentication
+  * handle debug logging detection issues
+
+[v0.0.1]:
+  * initial working version (search and download subtitles)
+  * OpenSubtitles support with optional authentication
+  * results ordering with preferred language ordered first
+        </news>
+    </extension>
+</addon>
+<addon id="skin.aeon.nox.silvo" version="91.0.0" name="Aeon Nox: SiLVO" provider-name="SiLVO">
+	<requires>
+		<import addon="xbmc.gui" version="5.17.0" />
+		<import addon="script.skinshortcuts" version="2.0.1" />
+		<import addon="resource.images.studios.white" version="0.0.1" />
+		<import addon="resource.images.recordlabels.white" version="0.0.1" />
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="af_ZA">Geskep deur BigNoid, Modded deur SiLVO, en Widgets deur Mr. V</summary>
+		<summary lang="de_DE">Erstellt von BigNoid, modifiziert von SiLVO, Widgets von Mr. V</summary>
+		<summary lang="el_GR">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_AU">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_GB">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_NZ">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="en_US">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="es_ES">Creada por BigNoid, Modificada por SiLVO, y Widgets por Mr. V</summary>
+		<summary lang="et_EE">Looja: BigNoid, muutja: SiLVO, ja vidinad: Mr. V</summary>
+		<summary lang="fi_FI">BigNoidin tekemä ja SILVOn muokkaama. Widgetit Mr. V:ltä</summary>
+		<summary lang="fr_CA">Créé par BigNoid, modifié by SiLVO, et gadgets logiciels par Mr. V</summary>
+		<summary lang="fr_FR">Créé par BigNoid, Moddé par SiLVO, avec les widgets de M. V</summary>
+		<summary lang="gl_ES">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="he_IL">המעטפת נוצרה על ידי BigNoid, Modded by SiLVO, and והיישומונים על ידי Mr. VLO</summary>
+		<summary lang="hu_HU">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="is_IS">Útbúið af BigNoid, breytt af SiLVO, viðmótshlutar eftir Mr. V</summary>
+		<summary lang="it_IT">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="ko_KR">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="lt_LT">Sukūrė BigNoid, modifikavo SiLVO bei valdiklius pridėjo Mr. V</summary>
+		<summary lang="ms_MY">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="nb_NO">Laget av BigNoid, modifisert av SiLVO, og miniprogrammer av Mr. V.</summary>
+		<summary lang="nl_NL">Ontwikkeld door BigNoid, aangepast door SiLVO, en Widgets door Mr. V</summary>
+		<summary lang="pl_PL">Stworzona przez BigNoid, zmodyfikowana przez SiLVO, a gadżety autorstwa Mr. V</summary>
+		<summary lang="pt_BR">Criado por BigNoid, Modificado por SiLVO e Widgets por Mr. V</summary>
+		<summary lang="pt_PT">Criado por BigNoid, Modded por SiLVO, e Widgets por Mr. V</summary>
+		<summary lang="ro_RO">Creat de BigNoid, Modificat de SiLVO, și widget-uri deMr. V</summary>
+		<summary lang="ru_RU">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="sk_SK">Vytvoril BigNoid, Upravil SiLVO, miniaplikácie vytvoril Mr. V</summary>
+		<summary lang="sv_SE">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="th_TH">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="tr_TR">BigNoid tarafından oluşturuldu; Modlar SILVO'dan, Widget'lar Mr. V'den.</summary>
+		<summary lang="vi_VN">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V - Sự trở về</summary>
+		<summary lang="zh_CN">Created by BigNoid, Modded by SiLVO, and Widgets by Mr. V</summary>
+		<summary lang="zh_TW">由BigNoid原創，SiLVO進行改造，以及由Mr. V製作的小工具</summary>
+		<description lang="af_ZA">Heeltemal oor ontwerp om 'n moderne aansig te skep, terwyl die klassieke Aeon gevoel behou word.</description>
+		<description lang="de_DE">Komplett neu designed für ein modernes Aussehen und das klassische Aeon-Feeling beizubehalten.</description>
+		<description lang="el_GR">Πλήρως επανασχεδιασμένο για να προσφέρει μια μοντέρνα αισθητική, διατηρώντας ταυτόχρονα την κλασική ομορφιά του Aeon.</description>
+		<description lang="en_AU">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_GB">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_NZ">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="en_US">Completely redesigned to create a modern look, while retaining the classic Aeon feel.</description>
+		<description lang="es_ES">Completamente rediseñado para crear un aspecto moderno, pero conservando el toque clásico Aeon.</description>
+		<description lang="et_EE">Täielikult uuesti disainitud, et luua tänapäevane välimus samas säilitades klassikaline Aeoni tunnetus.</description>
+		<description lang="fi_FI">Täysin uudelleensuunniteltu moderni ulkoasu, kuitenkin tuntuen klassiselta Aeonilta.</description>
+		<description lang="fr_CA">Complètement remanié pour créer une apparence moderne, tout en conservant l’esprit classique d’Aeon.</description>
+		<description lang="fr_FR">Totalement revu pour créer un look moderne, en gardant l'expérience Aeon.</description>
+		<description lang="gl_ES">Redeseñado completamente para crear unha aparencia moderna ao tempo que mantén a sensación do clásico Aeon.</description>
+		<description lang="he_IL">עיצוב חדש היוצר מראה מודרני אך משמר את ההרגשה של Aeon הקלאסי.</description>
+		<description lang="hr_HR">Potpuno preoblikovan moderan izgled, uz zadržani klasični Aeon osjećaj.</description>
+		<description lang="hu_HU">Teljesen áttervezett modern kinézet, de megtartva a klasszikus Aeon érzetet.</description>
+		<description lang="is_IS">Endurhannað nútímalegt útlit í anda Aeon.</description>
+		<description lang="it_IT">Completamente ridisegnato per creare un look moderno, mantenendo la consueta qualità Aeon.</description>
+		<description lang="ko_KR">고전적인 Aeon 느낌을 유지하면서 현대적인 모습으로 완전히 다시 디자인하여 만들었습니다.</description>
+		<description lang="lt_LT">Pilnai atnaujinta, kad sukurtų modernią išvaizdą, išlaikant klasikinio Aeon pojūtį.</description>
+		<description lang="ms_MY">Direka semula sepenuhnya untuk hasilkan penampilan modern, tetapi masih mengekalkan penampilan Aeon klasik.</description>
+		<description lang="nb_NO">Helt redesignet for å tilby en moderne utforming, samtidig som den klassiske Aeon-følelsen er beholdt.</description>
+		<description lang="nl_NL">Volledig opnieuw ontworpen om een ​​moderne look te creëren, met behoud van het klassieke Aeon-gevoel.</description>
+		<description lang="pl_PL">Całkowicie przeprojektowana skóra Aeon, o nowoczesnym wyglądzie, zachowując klasyczny układ skóry Aeon.</description>
+		<description lang="pt_BR">Design completamente novo para criar um look moderno, mantendo o feeling do Aeon Clássico.</description>
+		<description lang="pt_PT">Completamente redesenhado para criar um visual moderno enquanto retém o toque clássico Aeon.</description>
+		<description lang="ro_RO">Complet reproiectat pentru a crea o înfățișare modernă, dar totuși păstrând atmosfera clasică Aeon.</description>
+		<description lang="ru_RU">Полностью переработан, чтобы создать современный облик, сохраняя при этом классическое чувство Aeon.</description>
+		<description lang="sk_SK">Kompletne prepracovaný dizajn s moderným vzhľadom pri zachovaní klasického štýlu Aeon.</description>
+		<description lang="sv_SE">Totalt omarbetad för att skapa ett modernt utseende, samtidigt som man behåller den klassiska Aeon-känslan.</description>
+		<description lang="th_TH">การออกแบบใหม่หมดจด เพื่อสร้างรูปลักษณ์ทันสมัย, ​​ขณะที่ยังคงความรู้สึกคลาสสิคของ Aeon.</description>
+		<description lang="tr_TR">Modern görünüme kavuşturmak için baştan tasarlandı, klasik Aeon hissi korundu</description>
+		<description lang="vi_VN">Thiết kế lại hoàn toàn để tạo nên một phong cách hiện đại, trong khi đó vẫn duy trì một cảm giác Aeon cổ điển.</description>
+		<description lang="zh_TW">完全的翻新設計以創造現代化的視覺感受，同時仍維持Aeon的經典外觀。</description>
+		<platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=210069</forum>
+		<website>https://github.com/MikeSiLVO/skin.aeon.nox.silvo</website>
+		<source>https://github.com/MikeSiLVO/skin.aeon.nox.silvo</source>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+		<news>10.0.03
+			- Is official
+		</news>
+	</extension>
+</addon>
+</addons>
