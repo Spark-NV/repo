@@ -181,7 +181,7 @@ def clean_settings():
 		nfo_file.write(new_content)
 		nfo_file.close()
 		sleep(200)
-		notification(title=addon_name, message=lang(32042).format(str(len(removed_settings))))
+		notification(title="Lumina Scraper", message=lang(32042).format(str(len(removed_settings))))
 	except:
 		from cocoscrapers.modules import log_utils
 		log_utils.error()
