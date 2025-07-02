@@ -31,7 +31,7 @@
 		<label2 />
 		<icon>special://skin/extras/icons/DefaultAddonsSearch.png</icon>
 		<thumb />
-		<action>ActivateWindow(1129)</action>
+		<action>RunScript(script.globalsearch)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>playdisc</defaultID>
