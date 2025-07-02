@@ -174,7 +174,7 @@
 			<group id="3">
 				<setting id="provider.1337x" type="boolean" label="32101" help="">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 				<setting id="provider.bitcq" type="boolean" label="32137" help="">
@@ -184,7 +184,7 @@
 				</setting>
 				<setting id="provider.bitlord" type="boolean" label="32103" help="">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 				<setting id="provider.bitsearch" type="boolean" label="32138" help="">
@@ -219,7 +219,7 @@
 				</setting>
 				<setting id="provider.limetorrents" type="boolean" label="32575" help="">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 				<setting id="provider.mediafusion" type="boolean" label="32568" help="">
@@ -301,7 +301,7 @@
 				</setting>
 				<setting id="provider.piratebay" type="boolean" label="32117" help="">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 				<setting id="provider.torrentdownload" type="boolean" label="32123" help="">
@@ -316,7 +316,7 @@
 				</setting>
 				<setting id="provider.torrentgalaxy" type="boolean" label="32125" help="">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 				<setting id="provider.torrentio" type="boolean" label="32139" help="">
@@ -351,7 +351,7 @@
 				</setting>
 				<setting id="provider.ytsmx" type="boolean" label="32127" help="">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 			</group>
