@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1101" type="window">
+	<onload>Skin.SetBool(TMDbHelper.Service)</onload>
+	<onload>Skin.SetString(TMDbHelper.MonitorContainer,9143)</onload>
+	<onload>Skin.Reset(TMDbHelper.DirectCallAuto)</onload>
+	<onload>Skin.SetString(AutoCloseVideoOSD,5)</onload>
+	<onload>Skin.SetString(AutoCloseMusicOSD,5)</onload>
+	<onload>Skin.SetBool(PausedLabel)</onload>
+	<onload condition="!System.AddonIsEnabled(plugin.video.themoviedb.helper)">Skin.SetBool(Disable.NextAired)</onload>
+	<onload>Skin.SetBool(centermainmenu)</onload>
+	<onload>Skin.SetBool(MoreVideoInfoDetails)</onload>
+	<onload>Skin.SetBool(Disable.VideoInfoPathDetails)</onload>
+	<onload>Skin.SetBool(Disable.VideoInfoLanguageDetails)</onload>
+	<onload>Skin.SetString(DialogInfo.Dimmer,95%)</onload>
+	<onload>Skin.SetString(MyFlix.Dimmer,95%)</onload>
+	<onload>Skin.Reset(Disable.SearchButton)</onload>
+	<onload>Skin.SetBool(Enable.AutoScroll)</onload>
+	<onload>Skin.SetBool(Enable.HourMinuteDuration)</onload>
+	<onload condition="System.AddonIsEnabled(script.skin.info.service)">RunScript(script.skin.info.service)</onload>
+	<onload condition="System.AddonIsEnabled(script.artistslideshow)">RunScript(script.artistslideshow,daemon=True)</onload>
+	<onload condition="!String.IsEmpty(Skin.String(StartupIntro))">SetFocus(10)</onload>
+	<onload condition="String.IsEmpty(Skin.String(StartupIntro))">ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<onunload condition="!String.IsEmpty(Skin.String(StartupIntro))">SetProperty(Playing.StartupIntro,True,Home)</onunload>
+	<controls>
+		<control type="button" id="10">
+			<include>HiddenObject</include>
+			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+			<onfocus>PlayMedia($ESCINFO[Skin.String(StartupIntro)])</onfocus>
+		</control>
+	</controls>
+</window>
