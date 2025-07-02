@@ -51,7 +51,7 @@
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.requests" />
-		<import addon="plugin.video.youtube" optional="true" />
+		<import addon="script.module.inputstreamhelper" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="umbrella.py">
 		<provides>video</provides>
