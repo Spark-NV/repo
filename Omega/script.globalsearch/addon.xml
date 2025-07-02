@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.globalsearch" name="Global Search" version="91.0.0" provider-name="SparkNV">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+	</requires>
+	<extension point="xbmc.python.script" library="default.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_US">Search your library.</summary>
+		<summary lang="es_ES">Busca en tu biblioteca.</summary>
+		<description lang="en_US">This addon can find any item in your video and music library.</description>
+		<description lang="es_ES">Este complemento puede encontrar cualquier elemento en tu biblioteca de vídeo y música.</description>
+		<platform>all</platform>
+		<license>GPL-2.0-only</license>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+		<news>Based on - 9.0.7</news>
+	</extension>
+</addon>
