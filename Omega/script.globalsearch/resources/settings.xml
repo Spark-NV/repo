@@ -10,7 +10,7 @@
 				</setting>
 				<setting help="" id="actors" label="32011" type="boolean">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 				<setting help="" id="directors" label="32012" type="boolean">
@@ -25,7 +25,7 @@
 				</setting>
 				<setting help="" id="episodes" label="32003" type="boolean">
 					<level>0</level>
-					<default>true</default>
+					<default>false</default>
 					<control type="toggle"/>
 				</setting>
 				<setting help="" id="tvactors" label="32013" type="boolean">
@@ -35,7 +35,7 @@
 				</setting>
 				<setting help="" id="musicvideos" label="32004" type="boolean">
 					<level>0</level>
-					<default>true</default>
+					<default>false</default>
 					<control type="toggle"/>
 				</setting>
 				<setting help="" id="livetv" label="32009" type="boolean">
@@ -45,17 +45,17 @@
 				</setting>
 				<setting help="" id="artists" label="32005" type="boolean">
 					<level>0</level>
-					<default>true</default>
+					<default>false</default>
 					<control type="toggle"/>
 				</setting>
 				<setting help="" id="albums" label="32006" type="boolean">
 					<level>0</level>
-					<default>true</default>
+					<default>false</default>
 					<control type="toggle"/>
 				</setting>
 				<setting help="" id="songs" label="32007" type="boolean">
 					<level>0</level>
-					<default>true</default>
+					<default>false</default>
 					<control type="toggle"/>
 				</setting>
 				<setting help="" id="view" label="24140" type="integer">
