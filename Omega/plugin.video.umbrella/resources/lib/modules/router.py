@@ -41,8 +41,9 @@ def router(argv2):
 		if isUpdate == 'true':
 			control.execute('RunPlugin(plugin://plugin.video.umbrella/?action=tools_cleanSettings)')
 			control.homeWindow.clearProperty('umbrella.updated')
-			from resources.lib.modules import changelog
-			changelog.get('Umbrella')
+			# Removed changelog popup - uncomment the next line if you want to show it again
+			# from resources.lib.modules import changelog
+			# changelog.get('Umbrella')
 		navigator.Navigator().root()
 	####################################################
 	#---MOVIES

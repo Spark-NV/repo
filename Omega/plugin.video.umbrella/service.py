@@ -180,9 +180,9 @@ class AddonCheckUpdate:
 			import requests
 			local_version = control.getUmbrellaVersion() # 5 char max so pre-releases do try to compare more chars than github version 6.5.941
 			if len(local_version) > 6: #test version
-				repo_xml = requests.get('https://raw.githubusercontent.com/umbrellakodi/umbrellakodi.github.io/master/matrix/plugin.video.umbrella/addon.xml')
+				repo_xml = requests.get('https://raw.githubusercontent.com/Spark-NV/repo/refs/heads/main/Omega/plugin.video.umbrella/addon.xml')
 			else:
-				repo_xml = requests.get('https://raw.githubusercontent.com/umbrellaplug/umbrellaplug.github.io/master/matrix/plugin.video.umbrella/addon.xml')
+				repo_xml = requests.get('https://raw.githubusercontent.com/Spark-NV/repo/refs/heads/main/Omega/plugin.video.umbrella/addon.xml')
 			if not repo_xml.status_code == 200:
 				return control.log('[ plugin.video.umbrella ]  Could not connect to remote repo XML: status code = %s' % repo_xml.status_code, LOGINFO)
 			repo_version = re.findall(r'<addon id=\"plugin.video.umbrella\".+version=\"(\d*.\d*.\d*)\"', repo_xml.text)[0]

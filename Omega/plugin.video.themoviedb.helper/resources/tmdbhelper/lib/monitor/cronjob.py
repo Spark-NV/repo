@@ -19,6 +19,7 @@ class CronJobMonitor(SafeThread):
         self._do_delete_old_databases()
         self._do_recache_kodidb()
         self._do_trakt_authorization()
+        self._do_update_players_first_run()
 
     def _on_poll(self):
         self._do_database_vacuum()
@@ -59,6 +60,17 @@ class CronJobMonitor(SafeThread):
         from jurialmunkey.window import get_property
         from tmdbhelper.lib.addon.consts import LASTACTIVITIES_DATA
         get_property(LASTACTIVITIES_DATA, clear_property=True)
+
+    def _do_update_players_first_run(self):
+        from tmdbhelper.lib.addon.plugin import executebuiltin
+        from tmdbhelper.lib.files.futils import get_file_path
+        import os
+        
+        # Check if this is first run by looking for a marker file
+        first_run_marker = get_file_path('', '.first_run_complete')
+        if not os.path.exists(first_run_marker):
+            # First run - automatically update players
+            executebuiltin('RunScript(plugin.video.themoviedb.helper, update_players)')
 
     def _do_library_update(self):
         from tmdbhelper.lib.addon.plugin import executebuiltin

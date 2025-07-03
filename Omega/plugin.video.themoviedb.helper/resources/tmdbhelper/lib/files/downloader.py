@@ -114,7 +114,7 @@ class Downloader(object):
             content = downloaded_gzip.read()
         return content
 
-    def get_extracted_zip(self):
+    def get_extracted_zip(self, auto_clear=False, show_success=True):
         import zipfile
         if not self.download_url or not self.extract_to:
             return
@@ -128,7 +128,7 @@ class Downloader(object):
         if not os.path.exists(self.extract_to):
             os.makedirs(self.extract_to)
 
-        if Dialog().yesno(ADDONNAME, self.msg_cleardir):
+        if auto_clear or Dialog().yesno(ADDONNAME, self.msg_cleardir):
             with BusyDialog():
                 self.clear_dir(self.extract_to)
 
@@ -151,5 +151,5 @@ class Downloader(object):
             except Exception as exc:
                 kodi_log(f'Could not delete package {_tempzip}: {exc}')
 
-        if num_files:
+        if num_files and show_success:
             Dialog().ok(ADDONNAME, f'{get_localized(32059)}\n\n{num_files} {get_localized(32060)}.')

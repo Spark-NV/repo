@@ -145,8 +145,8 @@ class TraktAPI(NoCacheRequestAPI, TraktSync):
                 if not get_setting('startup_notifications'):
                     return
                 total_time = timer() - tf.timer_a
-                notification = f'Trakt authorized in {total_time:.3f}s'
-                Dialog().notification('TMDbHelper', notification, icon=f'{ADDONPATH}/icon.png')
+                notification = f'Trakt Authorized'
+                Dialog().notification('Trakt Service', notification, icon=f'{ADDONPATH}/icon.png')
 
         # Set a thread lock property
         with WindowProperty(('TraktCheckingAuth', 1)):

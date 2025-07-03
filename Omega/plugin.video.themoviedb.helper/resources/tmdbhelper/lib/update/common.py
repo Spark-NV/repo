@@ -17,7 +17,7 @@ class LibraryCommonFunctions():
             self._log._out()
         if self.clean_library:
             executebuiltin('CleanLibrary(video)')
-        if self.auto_update and update:
+        if update:
             executebuiltin('UpdateLibrary(video)')
 
     def _update(self, count, total, **kwargs):

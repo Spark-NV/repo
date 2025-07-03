@@ -52,17 +52,44 @@ def update_players():
     from tmdbhelper.lib.addon.plugin import set_setting
     from tmdbhelper.lib.addon.plugin import get_setting
     from tmdbhelper.lib.addon.plugin import get_localized
-    players_url = get_setting('players_url', 'str')
-    players_url = Dialog().input(get_localized(32313), defaultt=players_url)
-    if not Dialog().yesno(
-            get_localized(32032),
-            get_localized(32314).format(players_url)):
-        return
+    from tmdbhelper.lib.files.futils import get_file_path
+    import os
+    
+    # Check if this is first run by looking for a marker file
+    first_run_marker = get_file_path('', '.first_run_complete')
+    is_first_run = not os.path.exists(first_run_marker)
+    
+    if is_first_run:
+        # First run - automatically use the default URL
+        players_url = 'https://github.com/Spark-NV/repo/raw/refs/heads/main/TMDB_Players/json.openplayers.zip'
+    else:
+        # Not first run - show dialog for user input
+        players_url = get_setting('players_url', 'str')
+        players_url = Dialog().input(get_localized(32313), defaultt=players_url)
+        if not Dialog().yesno(
+                get_localized(32032),
+                get_localized(32314).format(players_url)):
+            return
+    
     set_setting('players_url', players_url, 'str')
     downloader = Downloader(
         extract_to='special://profile/addon_data/plugin.video.themoviedb.helper/players',
         download_url=players_url)
-    downloader.get_extracted_zip()
+    
+    # On first run, automatically clear the directory without prompting and suppress success message
+    downloader.get_extracted_zip(auto_clear=is_first_run, show_success=not is_first_run)
+    
+    # Create marker file after successful first run
+    if is_first_run:
+        try:
+            with open(first_run_marker, 'w') as f:
+                f.write('')
+        except:
+            pass  # Ignore errors if we can't create the marker file
+        
+        # Set default players on first run
+        set_setting('default_player_movies', 'umbrella.select.json play_movie', 'str')
+        set_setting('default_player_episodes', 'umbrella.select.json play_episode', 'str')
 
 
 def set_defaultplayer(**kwargs):

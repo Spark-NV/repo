@@ -2211,12 +2211,12 @@
 				</setting>
 				<setting id="source.prioritize.av1" type="boolean" label="40131" help="">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 				<setting id="source.prioritize.hevc" type="boolean" label="32229" help="">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 				<setting id="source.prioritize.direct" type="boolean" label="40400" help="">
@@ -2254,7 +2254,7 @@
 				</setting>
 				<setting id="source.filtermbysize" type="integer" label="40237" help="">
 					<level>0</level>
-					<default>0</default>
+					<default>2</default>
 					<constraints>
 						<options>
 							<option label="Off">0</option>
@@ -2285,7 +2285,7 @@
 					<constraints>
 						<minimum>0.0</minimum>
 						<step>0.1</step>
-						<maximum>10.0</maximum>
+						<maximum>6.0</maximum>
 					</constraints>
 					<dependencies>
 						<dependency type="visible">
@@ -2391,7 +2391,7 @@
 				</setting>
 				<setting id="remove.duplicates.popup" type="boolean" label="40135" help="" parent="remove.duplicates">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<dependencies>
 						<dependency type="visible">
 							<condition operator="is" setting="remove.duplicates">true</condition>
@@ -2411,7 +2411,7 @@
 				</setting>
 				<setting id="sources.retryall" type="boolean" label="40405" help="" parent="">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 				<setting id="showHelpremoveUncached" type="action" label="32137" help="">
@@ -2426,7 +2426,7 @@
 			<group id="3" label="40145">
 				<setting id="remove.dolby.vision" type="boolean" label="32388" help="">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 				<setting id="showHelpremoveDolbyVision" type="action" label="32137" help="">
@@ -2489,7 +2489,7 @@
 				</setting>
 				<setting id="remove.cam.sources" type="boolean" label="32160" help="">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 				<setting id="remove.sd.sources" type="boolean" label="32161" help="">
@@ -4193,7 +4193,7 @@
 				</setting>
 				<setting id="pm_cloud.enabled" type="boolean" label="32050" help="">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<dependencies>
 						<dependency type="visible">
 							<and>
@@ -4643,12 +4643,12 @@
 			<group id="1" label="40450">
 				<setting id="provider.external.enabled" type="boolean" label="40444" help="">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<control type="toggle"/>
 				</setting>
 				<setting id="external_provider.name" type="string" label="40445" help="">
 					<level>0</level>
-					<default/>
+					<default>cocoscrapers</default>
 					<constraints>
 						<allowempty>true</allowempty>
 					</constraints>
@@ -4662,7 +4662,7 @@
 				</setting>
 				<setting id="external_provider.module" type="string" label="40445" help="">
 					<level>0</level>
-					<default/>
+					<default>script.module.cocoscrapers</default>
 					<constraints>
 						<allowempty>true</allowempty>
 					</constraints>

@@ -258,12 +258,12 @@
                 </setting>
                 <setting id="library_autoupdate" type="boolean" label="32086" help="">
                     <level>0</level>
-                    <default>false</default>
+                    <default>true</default>
                     <control type="toggle"/>
                 </setting>
                 <setting id="library_autoupdate_hour" type="integer" label="32130" help="" parent="library_autoupdate">
                     <level>0</level>
-                    <default>0</default>
+                    <default>5</default>
                     <constraints>
                         <options>
                             <option label="&#173;12 AM">0</option>
@@ -346,7 +346,7 @@
             <group id="2" label="10039">
                 <setting id="ignore_folderchecking" type="boolean" label="32077" help="">
                     <level>0</level>
-                    <default>false</default>
+                    <default>true</default>
                     <control type="toggle"/>
                 </setting>
                 <setting id="alternative_nfo" type="boolean" label="32390" help="">
@@ -584,7 +584,7 @@
                 </setting>
                 <setting id="trakt_scrobbling" type="boolean" label="32529" help="">
                     <level>0</level>
-                    <default>true</default>
+                    <default>false</default>
                     <control type="toggle"/>
                 </setting>
                 <setting id="trakt_watchedindicators" type="boolean" label="32013" help="">
