@@ -28,7 +28,7 @@
 		<news></news>
 	</extension>
 </addon>
-<addon id="script.globalsearch" name="Global Search" version="9.0.7" provider-name="ronie">
+<addon id="script.globalsearch" name="Global Search" version="90.0.0" provider-name="ronie">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 	</requires>

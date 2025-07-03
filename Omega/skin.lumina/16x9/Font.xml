@@ -247,6 +247,12 @@
 			<size>68</size>
 		</font>
 		<font>
+			<name>font45caps_title_70</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<style>uppercase</style>
+			<size>70</size>
+		</font>
+		<font>
 			<name>font100caps_title</name>
 			<filename>RobotoCondensed-Regular.ttf</filename>
 			<style>uppercase</style>

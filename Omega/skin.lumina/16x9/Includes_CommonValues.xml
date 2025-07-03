@@ -79,25 +79,25 @@
 		<focusedcolor>white</focusedcolor>
 	</include>
 	<include name="Objects_KeyOff">
-		<textoffsety>32</textoffsety>
+		<textoffsety>48</textoffsety>
 		<align>center</align>
 		<aligny>center</aligny>
-		<font>font15</font>
+		<font>font48</font>
 		<textcolor>grey2</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<selectedcolor>grey2</selectedcolor>
 	</include>
 	<include name="Objects_DoubleKeyOff">
 		<left>-123</left>
-		<width>320</width>
-		<height>80</height>
-		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texturefocus>
+		<width>480</width>
+		<height>120</height>
+		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="6">listselect_fo.png</texturefocus>
 		<include>Objects_KeyOff</include>
 	</include>
 	<include name="Objects_SingleKeyOff">
-		<width>80</width>
-		<height>80</height>
-		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="4">listselect_fo.png</texturefocus>
+		<width>120</width>
+		<height>120</height>
+		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="6">listselect_fo.png</texturefocus>
 		<include>Objects_KeyOff</include>
 	</include>
 	<include name="ShowCaseInfoPanelButtonsValues">

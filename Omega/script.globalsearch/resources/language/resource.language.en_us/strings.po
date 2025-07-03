@@ -76,8 +76,8 @@ msgstr ""
 
 # empty strings from id 32012 to 32100
 msgctxt "#32101"
-msgid "Enter search string"
-msgstr "Enter search string"
+msgid "Hold "Start Search" To Use Voice"
+msgstr "Hold "Start Search" To Use Voice"
 
 msgctxt "#32102"
 msgid "Items"

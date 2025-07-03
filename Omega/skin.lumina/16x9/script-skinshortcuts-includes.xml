@@ -54,7 +54,7 @@
 			<property name="path">RunScript(script.globalsearch)</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">script-globalsearch</property>
-			<property name="hasSubmenu">True</property>
+			<property name="hasSubmenu">False</property>
 			</item>
 		<item id="5">
 			<property name="id">$NUMBER[5]</property>
@@ -199,18 +199,6 @@
 			<property name="path">ActivateWindow(TVTimers)</property>
 			<onclick condition="![System.HasPVRAddon]">ActivateWindow(addonbrowser,addons://repository.xbmc.org/xbmc.pvrclient,return)</onclick>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-31502)</visible>
-			<property name="isSubmenu">True</property>
-			</item>
-		<item id="1">
-			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">4</property>
-			<label>Sync And Update Library</label>
-			<label2 />
-			<icon>DefaultShortcut.png</icon>
-			<thumb />
-			<onclick>RunScript(plugin.video.themoviedb.helper, library_autoupdate)</onclick>
-			<property name="path">RunScript(plugin.video.themoviedb.helper, library_autoupdate)</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),script-globalsearch)</visible>
 			<property name="isSubmenu">True</property>
 			</item>
 		<item id="1">
@@ -756,32 +744,10 @@
 		<description>No items</description>
 		</include>
 	<include name="skinshortcuts-group-script-globalsearch">
-		<item id="1">
-			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">4</property>
-			<label>Sync And Update Library</label>
-			<label2 />
-			<icon>DefaultShortcut.png</icon>
-			<thumb />
-			<onclick>RunScript(plugin.video.themoviedb.helper, library_autoupdate)</onclick>
-			<property name="path">RunScript(plugin.video.themoviedb.helper, library_autoupdate)</property>
-			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
-			<property name="isSubmenu">True</property>
-			</item>
+		<description>No items</description>
 		</include>
 	<include name="skinshortcuts-group-alt-script-globalsearch">
-		<item id="1">
-			<property name="id">$NUMBER[1]</property>
-			<property name="mainmenuid">4</property>
-			<label>Sync And Update Library</label>
-			<label2 />
-			<icon>DefaultShortcut.png</icon>
-			<thumb />
-			<onclick>RunScript(plugin.video.themoviedb.helper, library_autoupdate)</onclick>
-			<property name="path">RunScript(plugin.video.themoviedb.helper, library_autoupdate)</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),script-globalsearch)</visible>
-			<property name="isSubmenu">True</property>
-			</item>
+		<description>No items</description>
 		</include>
 	<include name="skinshortcuts-group-script-globalsearch-1">
 		<description>No items</description>

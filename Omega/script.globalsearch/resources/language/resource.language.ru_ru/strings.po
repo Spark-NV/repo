@@ -77,7 +77,7 @@ msgstr "Поиск актёров сериалов"
 
 # empty strings from id 32012 to 32100
 msgctxt "#32101"
-msgid "Enter search string"
+msgid "Hold "Start Search" To Use Voice"
 msgstr "Строка поиска"
 
 msgctxt "#32102"

@@ -77,7 +77,7 @@ msgstr "搜索剧集演员"
 
 # empty strings from id 32012 to 32100
 msgctxt "#32101"
-msgid "Enter search string"
+msgid "Hold "Start Search" To Use Voice"
 msgstr "输入搜索字符串"
 
 msgctxt "#32102"
