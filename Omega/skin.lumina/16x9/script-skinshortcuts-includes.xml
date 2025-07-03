@@ -50,11 +50,11 @@
 			<icon>special://skin/extras/icons/DefaultAddonsSearch.png</icon>
 			<thumb />
 			<onclick condition="String.IsEqual(ListItem.Property(path),ActivateWindow(1129))">SetProperty(CustomSelect,search,Home)</onclick>
-			<onclick>ActivateWindow(1129)</onclick>
-			<property name="path">ActivateWindow(1129)</property>
+			<onclick>RunScript(script.globalsearch)</onclick>
+			<property name="path">RunScript(script.globalsearch)</property>
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="submenuVisibility">num-137</property>
-			<property name="hasSubmenu">False</property>
+			<property name="hasSubmenu">True</property>
 			</item>
 		<item id="5">
 			<property name="id">$NUMBER[5]</property>
@@ -432,6 +432,18 @@
 			<property name="path">Dialog.Close(all,true)</property>
 			<onclick>ActivateWindow(skinsettings)</onclick>
 			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),buttonmenu)</visible>
+			<property name="isSubmenu">True</property>
+			</item>
+		<item id="$NUMBER[1]">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">4</property>
+			<label>Sync And Update Library</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<onclick>RunScript(plugin.video.themoviedb.helper, library_autoupdate)</onclick>
+			<property name="path">RunScript(plugin.video.themoviedb.helper, library_autoupdate)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-137)</visible>
 			<property name="isSubmenu">True</property>
 			</item>
 		</include>
@@ -1036,6 +1048,18 @@
 			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="isSubmenu">True</property>
 			</item>
+		<item id="$NUMBER[1]">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">4</property>
+			<label>Sync And Update Library</label>
+			<label2 />
+			<icon>DefaultShortcut.png</icon>
+			<thumb />
+			<onclick>RunScript(plugin.video.themoviedb.helper, library_autoupdate)</onclick>
+			<property name="path">RunScript(plugin.video.themoviedb.helper, library_autoupdate)</property>
+			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Container(9000).ListItem.Property(submenuVisibility),num-137)</visible>
+			<property name="isSubmenu">True</property>
+			</item>
 		</include>
 	<include name="skinshortcuts-group-alt-buttonmenu">
 		<item id="1">
@@ -1218,7 +1242,7 @@
 			<onclick>Dialog.Close(all,true)</onclick>
 			<property name="path">Dialog.Close(all,true)</property>
 			<onclick>ActivateWindow(favouritesbrowser)</onclick>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),buttonmenu)</visible>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="isSubmenu">True</property>
 			</item>
 		<item id="15">
@@ -1230,7 +1254,7 @@
 			<thumb />
 			<onclick>ReloadSkin()</onclick>
 			<property name="path">ReloadSkin()</property>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),buttonmenu)</visible>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="isSubmenu">True</property>
 			</item>
 		<item id="16">
@@ -1243,7 +1267,7 @@
 			<onclick>Dialog.Close(all,true)</onclick>
 			<property name="path">Dialog.Close(all,true)</property>
 			<onclick>ActivateWindow(skinsettings)</onclick>
-			<visible>[String.IsEqual(System.ProfileName,Master user)] + String.IsEqual(Window(10000).Property(submenuVisibility),buttonmenu)</visible>
+			<visible>String.IsEqual(System.ProfileName,Master user)</visible>
 			<property name="isSubmenu">True</property>
 			</item>
 		</include>
