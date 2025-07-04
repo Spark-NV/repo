@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">55</defaultcontrol>
-	<views>50,51,52,53,55,56,57,58,59,500,501,502,503,504,505,506,507,509,510,511,512</views>
+	<views>55</views>
 	<menucontrol>9051</menucontrol>
 	<!-- <onload condition="System.AddonIsEnabled(plugin.video.themoviedb.helper) + Skin.HasSetting(Enable.BlurredVideoInfo)">SetProperty(TMDbHelper.Blur.SourceImage,Art(poster)|Art(season.poster)|Art(tvshow.poster)|Art(thumb)|Icon,Home)</onload> -->
 	<onload>SetProperty(Window.HasSettings,True,Home)</onload>
 	<onload>ClearProperty(MediaMenu,Home)</onload>
+	<onload>Container.SetViewMode(55)</onload>
 	<onunload>ClearProperty(MediaMenu,Home)</onunload>
 	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
 	<controls>
 		<control type="button" id="8">
 			<include>HiddenObject</include>
-		</control>
-		<control type="button" id="4400">
-			<include>HiddenObject</include>
-			<onfocus>SetProperty(Enable.FullscreenFanart,True,Home)</onfocus>
-			<onfocus>ActivateWindow(1113)</onfocus>
-			<onleft>50</onleft>
-			<onright>50</onright>
-			<onup>50</onup>
-			<ondown>50</ondown>
-			<onclick>50</onclick>
 		</control>
 		<control type="button" id="4401">
 			<include>HiddenObject</include>

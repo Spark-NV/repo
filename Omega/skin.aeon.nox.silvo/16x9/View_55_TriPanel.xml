@@ -141,8 +141,7 @@
 					<onup>PageUp(70)</onup>
 					<ondown>PageUp(70)</ondown>
 					<onleft>50</onleft>
-					<onright condition="!Control.IsVisible(615)">4400</onright>
-					<onright condition="Control.IsVisible(615)">615</onright>
+					<onright>615</onright>
 					<texturesliderbackground>colors/black10.png</texturesliderbackground>
 					<texturesliderbar>colors/white25.png</texturesliderbar>
 					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
@@ -190,10 +189,7 @@
 					<height>840</height>
 					<onleft>SetProperty(MediaMenu,True,Home)</onleft>
 					<onleft>SetFocus(9050)</onleft>
-					<onright condition="Control.IsVisible(615)">615</onright>
-					<onright condition="!Control.IsVisible(615) + Control.IsVisible(95560)">95560</onright>
-					<onright condition="!Control.IsVisible(615) + !Control.IsVisible(95560) + Control.IsVisible(95561)">95561</onright>
-					<onright condition="!Control.IsVisible(615) + !Control.IsVisible(95560) + !Control.IsVisible(95561)">4400</onright>
+					<onright>615</onright>
 					<onup>55</onup>
 					<ondown>55</ondown>
 					<viewtype label="31078">list</viewtype>
@@ -517,9 +513,7 @@
 					<onup>95560</onup>
 					<ondown>95560</ondown>
 					<onleft>50</onleft>
-					<onright condition="Control.IsVisible(95561)">95561</onright>
-					<onright condition="!Control.IsVisible(615) + !Control.IsVisible(95561)">4400</onright>
-					<onright condition="Control.IsVisible(615) + !Control.IsVisible(95561)">615</onright>
+					<onright>615</onright>
 					<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
 					<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
 					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
@@ -699,8 +693,7 @@
 					<height>575</height>
 					<onleft>SetProperty(MediaMenu,True,Home)</onleft>
 					<onleft>SetFocus(9050)</onleft>
-					<onright condition="Control.IsVisible(615)">615</onright>
-					<onright condition="!Control.IsVisible(615)">95560</onright>
+					<onright>615</onright>
 					<onup>55</onup>
 					<ondown>55</ondown>
 					<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(addons) | [Window.IsActive(music) + Container.Content(files)]</visible>
@@ -827,8 +820,7 @@
 					<onup>95560</onup>
 					<ondown>95560</ondown>
 					<onleft>50</onleft>
-					<onright condition="!Control.IsVisible(615)">4400</onright>
-					<onright condition="Control.IsVisible(615)">615</onright>
+					<onright>615</onright>
 					<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
 					<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
 					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
@@ -901,8 +893,7 @@
 					<onup>PageUp(70)</onup>
 					<ondown>PageUp(70)</ondown>
 					<onleft>50</onleft>
-					<onright>SetProperty(MediaMenu,True,Home)</onright>
-					<onright>SetFocus(9050)</onright>
+					<onright>615</onright>
 					<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
 					<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
 					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
@@ -955,8 +946,7 @@
 					<height>840</height>
 					<onleft>SetProperty(MediaMenu,True,Home)</onleft>
 					<onleft>SetFocus(9050)</onleft>
-					<onright condition="Control.IsVisible(615)">615</onright>
-					<onright condition="!Control.IsVisible(615)">95560</onright>
+					<onright>615</onright>
 					<onup>55</onup>
 					<ondown>55</ondown>
 					<viewtype label="31078">list</viewtype>
@@ -1036,7 +1026,7 @@
 					<onup>95560</onup>
 					<ondown>95560</ondown>
 					<onleft>50</onleft>
-					<onright>95562</onright>
+					<onright>615</onright>
 					<texturesliderbackground colordiffuse="1AFFFFFF">colors/white50.png</texturesliderbackground>
 					<texturesliderbar colordiffuse="1AFFFFFF">colors/white.png</texturesliderbar>
 					<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
