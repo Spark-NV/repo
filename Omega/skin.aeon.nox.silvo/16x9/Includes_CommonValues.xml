@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Constants -->
+	<constant name="FanartCrossfadeTime">500</constant>
+	<constant name="IconCrossfadeTime">400</constant>
+	<constant name="MaxDepth">0.30</constant>
+	<constant name="MinDepth">-0.80</constant>
+	<!-- Defaults -->
+	<include name="FullscreenDimensions">
+		<width>100%</width>
+		<height>1080</height>
+	</include>
+	<include name="HiddenObject">
+		<left>-300</left>
+		<top>-300</top>
+		<width>1</width>
+		<height>1</height>
+		<texturefocus />
+		<texturenofocus />
+		<label />
+		<font />
+	</include>
+	<include name="NoFocusObject">
+		<focusedcolor />
+		<texturefocus />
+		<texturenofocus />
+		<textoffsetx />
+	</include>
+	<include name="HiddenList">
+		<left>-100</left>
+		<top>-100</top>
+		<width>100</width>
+		<height>100</height>
+		<itemlayout height="100" width="100" />
+		<focusedlayout height="100" width="100" />
+	</include>
+	<!-- Buttons -->
+	<include name="ButtonTopbarCommonvalues">
+		<height>60</height>
+		<width>60</width>
+		<align>center</align>
+		<aligny>top</aligny>
+		<textoffsety>3</textoffsety>
+		<font>IconSmallMD</font>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<shadowcolor>ff000000</shadowcolor>
+	</include>
+	<include name="ButtonCommonValues">
+		<width>400</width>
+		<height>60</height>
+		<textoffsetx>15</textoffsetx>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<textwidth>300</textwidth>
+		<aligny>center</aligny>
+		<font>font13</font>
+		<radioposx>300</radioposx>
+	</include>
+	<include name="SettingsButtonCommonValues">
+		<param name="is_addon_status" default="false" />
+		<param name="addon">$PARAM[addon]</param>
+		<definition>
+			<font>font15</font>
+			<textoffsetx>30</textoffsetx>
+			<include condition="!$PARAM[is_addon_status]">SettingsButtonDefaults</include>
+			<include condition="$PARAM[is_addon_status]" content="AddonStatusButtonDefaults">
+				<param name="addon">$PARAM[addon]</param>
+			</include>
+		</definition>
+	</include>
+	<include name="SettingsButtonDefaults">
+		<width>1401</width>
+		<height>81</height>
+		<radioposx>1281</radioposx>
+	</include>
+	<include name="AddonStatusButtonDefaults">
+		<width>1757</width>
+		<height>54</height>
+		<label>$PARAM[addon]</label>
+		<radiowidth>100</radiowidth>
+		<radioheight>48</radioheight>
+		<radioposx>1657</radioposx>
+		<textureradioonfocus colordiffuse="darkgreen">buttons/check_box_enabled.png</textureradioonfocus>
+		<textureradioonnofocus colordiffuse="darkgreen">buttons/check_box_enabled.png</textureradioonnofocus>
+		<textureradioofffocus colordiffuse="darkorange">buttons/download.png</textureradioofffocus>
+		<textureradiooffnofocus colordiffuse="darkorange">buttons/download.png</textureradiooffnofocus>
+		<onclick condition="System.AddonIsEnabled($PARAM[addon])">Addon.OpenSettings($PARAM[addon])</onclick>
+		<onclick condition="System.HasAddon($PARAM[addon]) + !System.AddonIsEnabled($PARAM[addon])">EnableAddon($PARAM[addon])</onclick>
+		<onclick condition="!System.HasAddon($PARAM[addon])">InstallAddon($PARAM[addon])</onclick>
+		<selected>System.AddonIsEnabled($PARAM[addon]) + System.HasAddon($PARAM[addon])</selected>
+	</include>
+	<include name="SettingsTextboxValues">
+		<left>467</left>
+		<top>888</top>
+		<width>1341</width>
+		<height>120</height>
+		<font>font16bold_textbox</font>
+		<textcolor>grey2</textcolor>
+		<align>justify</align>
+		<aligny>center</aligny>
+	</include>
+	<include name="ButtonInfoDialogsCommonValues">
+		<height>60</height>
+		<width>254</width>
+		<textoffsetx>0</textoffsetx>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font15</font>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+	</include>
+	<include name="Objects_KeyOff">
+		<textoffsety>32</textoffsety>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font15</font>
+		<textcolor>grey2</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<selectedcolor>grey2</selectedcolor>
+	</include>
+	<include name="Objects_DoubleKeyOff">
+		<left>-123</left>
+		<width>320</width>
+		<height>80</height>
+		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="4">colors/white50.png</texturefocus>
+		<include>Objects_KeyOff</include>
+	</include>
+	<include name="Objects_SingleKeyOff">
+		<width>80</width>
+		<height>80</height>
+		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="4">colors/white50.png</texturefocus>
+		<include>Objects_KeyOff</include>
+	</include>
+	<include name="ShowCaseInfoPanelButtonsValues">
+		<height>85</height>
+		<width>501</width>
+		<textoffsetx>15</textoffsetx>
+		<aligny>top</aligny>
+		<font>font14</font>
+		<textcolor>white2</textcolor>
+		<focusedcolor>white2</focusedcolor>
+	</include>
+	<include name="DefaultButtonsValues">
+		<height>90</height>
+		<width>501</width>
+		<textoffsetx>15</textoffsetx>
+		<aligny>top</aligny>
+		<font>font14</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>shadow</shadowcolor>
+		<focusedcolor>white</focusedcolor>
+	</include>
+	<include name="SettingsPanelButtonsValues">
+		<height>90</height>
+		<width>1256</width>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>-4</textoffsety>
+		<aligny>top</aligny>
+		<font>font15</font>
+		<textcolor>grey2</textcolor>
+		<focusedcolor>grey2</focusedcolor>
+	</include>
+	<!-- Media Flags -->
+	<include name="MediaFlagValues">
+		<width>170</width>
+		<height>78</height>
+		<aspectratio>keep</aspectratio>
+		<fadetime>250</fadetime>
+		<colordiffuse>grey</colordiffuse>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</include>
+	<include name="CustomColorRadioButton">
+		<param name="ColorStringVar" />
+		<definition>
+			<width>1401</width>
+			<height>90</height>
+			<textoffsetx>30</textoffsetx>
+			<font>font15</font>
+			<label2>[LIGHT][UPPERCASE]$PARAM[ColorStringVar][/UPPERCASE][/LIGHT]             </label2>
+			<textureradioonfocus colordiffuse="$PARAM[ColorStringVar]">colors/grey.png</textureradioonfocus>
+			<textureradioonnofocus colordiffuse="$PARAM[ColorStringVar]">colors/grey.png</textureradioonnofocus>
+			<textureradioofffocus colordiffuse="$PARAM[ColorStringVar]">colors/grey.png</textureradioofffocus>
+			<textureradiooffnofocus colordiffuse="$PARAM[ColorStringVar]">colors/grey.png</textureradiooffnofocus>
+			<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="1">colors/white50.png</texturefocus>
+		</definition>
+	</include>
+	<!-- EXP -->
+	<expression name="HasVerticalMenuWithExtended">String.IsEqual(Skin.String(MainMenu.Layout),vertical) + [String.Contains(Container(9000).ListItem.Property(widgetStyle),Extended) + ControlGroup(90010).HasFocus] | [String.Contains(Container(9000).ListItem.Property(widgetStyle.2),Extended) + ControlGroup(90020).HasFocus]</expression>
+	<expression name="WidgetFanartVisible">[[String.IsEmpty(Container(9000).ListItem.Property(widgetDisableFanart)) + ControlGroup(90010).HasFocus] | [String.IsEmpty(Container(9000).ListItem.Property(widgetDisableFanart.2)) + ControlGroup(90020).HasFocus]]</expression>
+	<expression name="HasInfoPlotArt">[String.IsEqual(ListItem.DBTYPE,movie) + Skin.HasSetting(discartoninfo) + !String.IsEmpty(ListItem.Art(discart))] | [String.IsEqual(ListItem.DBTYPE,tvshow) + Skin.HasSetting(CharacterOnInfo) + !String.IsEmpty(ListItem.Art(clearart))] | [String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,season)] + Skin.HasSetting(CharacterOnInfo) + !String.IsEmpty(ListItem.Art(tvshow.clearart))</expression>
+	<expression name="NoInfoPlotArt">[String.IsEqual(ListItem.DBTYPE,movie) + [!Skin.HasSetting(discartoninfo) | String.IsEmpty(ListItem.Art(discart))]] | [String.IsEqual(ListItem.DBTYPE,tvshow) + [!Skin.HasSetting(CharacterOnInfo) | String.IsEmpty(ListItem.Art(clearart))]] | [[String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,season)] + [!Skin.HasSetting(CharacterOnInfo) | String.IsEmpty(ListItem.Art(tvshow.clearart))]] | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.Property(item.type),person) | String.IsEqual(ListItem.DBTYPE,musicvideo)</expression>
+	<expression name="HasCustomInfoPlotArt">[String.IsEqual(Window(Home).Property(item_dbtype),movie) + Skin.HasSetting(discartoninfo) + !String.IsEmpty(Container(4800).ListItem.Art(discart))] | [String.IsEqual(Window(Home).Property(item_dbtype),tvshow) + Skin.HasSetting(CharacterOnInfo) + !String.IsEmpty(Container(4800).ListItem.Art(clearart))] | [String.IsEqual(Window(Home).Property(item_dbtype),episode) | String.IsEqual(Window(Home).Property(item_dbtype),season)] + Skin.HasSetting(CharacterOnInfo) + !String.IsEmpty(Container(4800).ListItem.Art(tvshow.clearart))</expression>
+	<expression name="NoCustomInfoPlotArt">[String.IsEqual(Window(Home).Property(item_dbtype),movie) + [!Skin.HasSetting(discartoninfo) | String.IsEmpty(Container(4800).ListItem.Art(discart))]] | [String.IsEqual(Window(Home).Property(item_dbtype),tvshow) + [!Skin.HasSetting(CharacterOnInfo) | String.IsEmpty(Container(4800).ListItem.Art(clearart))]] | [[String.IsEqual(Window(Home).Property(item_dbtype),episode) | String.IsEqual(Window(Home).Property(item_dbtype),season)] + [!Skin.HasSetting(CharacterOnInfo) | String.IsEmpty(Container(4800).ListItem.Art(tvshow.clearart))]]</expression>
+</includes>

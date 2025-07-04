@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.video.themoviedb.helper"
 version="91.0.1"
-name="TMDb Helper"
+name="Trakt Helper"
 provider-name="jurialmunkey">
 <requires>
   <import addon="xbmc.python" version="3.0.1"/>

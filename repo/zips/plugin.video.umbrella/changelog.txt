@@ -1,2 +1,0 @@
-[B]Update - v6.7.47 - July 1st, 2025[/B]
---[Change] Made changes to Trakt code for time. Thanks kodifitzwell

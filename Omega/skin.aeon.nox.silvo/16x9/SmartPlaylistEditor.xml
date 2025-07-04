@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">22</defaultcontrol>
+	<include>DialogOpenCloseAnimation</include>
+	<controls>
+		<include content="DimBackground">
+			<param name="texture">colors/black75.png</param>
+		</include>
+		<control type="group">
+			<left>206</left>
+			<top>166</top>
+			<visible>!Window.IsVisible(smartplaylistrule)</visible>
+			<include>VisibleFadeAnimation</include>
+			<include content="DialogPanel">
+				<param name="height">747</param>
+				<param name="header_label">$VAR[DialogSettingsHeaderVar]</param>
+				<param name="buttons_ondown">9000</param>
+				<param name="close_onclick">SendClick(21)</param>
+				<param name="ok_onclick">SendClick(20)</param>
+				<param name="ok_visible">Control.IsVisible(20)</param>
+			</include>
+			<control type="group">
+				<top>68</top>
+				<control type="grouplist" id="9000">
+					<height>180</height>
+					<onleft>97</onleft>
+					<onright>97</onright>
+					<onup>19</onup>
+					<ondown>10</ondown>
+					<control type="button" id="22">
+						<description>Set Playlist type</description>
+						<top>88</top>
+						<width>1500</width>
+						<label>$LOCALIZE[467]</label>
+					</control>
+					<control type="edit" id="12">
+						<description>Name Button</description>
+						<top>148</top>
+						<width>1500</width>
+						<label />
+						<texturenofocus>colors/white25.png</texturenofocus>
+						<hinttext>$LOCALIZE[21433]</hinttext>
+					</control>
+					<control type="button" id="99">
+						<description>rules label</description>
+						<top>208</top>
+						<width>1500</width>
+						<label>$LOCALIZE[21434]</label>
+						<disabledcolor>$VAR[ThemeLabelColor]</disabledcolor>
+						<enable>no</enable>
+						<texturefocus />
+					</control>
+				</control>
+				<control type="image">
+					<left>1</left>
+					<top>187</top>
+					<width>1498</width>
+					<height>1</height>
+					<texture colordiffuse="grey4">colors/white.png</texture>
+				</control>
+				<control type="panel" id="10">
+					<description>Rules List Control</description>
+					<top>188</top>
+					<width>1190</width>
+					<height>180</height>
+					<onup>12</onup>
+					<onleft>97</onleft>
+					<onright>9001</onright>
+					<ondown>16</ondown>
+					<itemlayout width="1190" height="60">
+						<control type="label">
+							<width>1190</width>
+							<height>60</height>
+							<textoffsetx>15</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>grey2</textcolor>
+							<font>font14</font>
+						</control>
+					</itemlayout>
+					<focusedlayout width="1190" height="68">
+						<control type="image">
+							<width>1190</width>
+							<height>60</height>
+							<texture colordiffuse="$VAR[HighlightBarColor]" border="4">colors/white50.png</texture>
+							<include>VisibleFadeAnimation</include>
+						</control>
+						<control type="label">
+							<width>1190</width>
+							<height>60</height>
+							<textoffsetx>15</textoffsetx>
+							<label>$INFO[ListItem.Label]</label>
+							<font>font14</font>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="image">
+					<left>1</left>
+					<top>368</top>
+					<width>1498</width>
+					<height>1</height>
+					<texture colordiffuse="grey4">colors/white.png</texture>
+				</control>
+				<control type="image">
+					<left>1190</left>
+					<top>188</top>
+					<width>1</width>
+					<height>180</height>
+					<texture colordiffuse="grey4">colors/white.png</texture>
+				</control>
+				<control type="grouplist" id="9001">
+					<right>214</right>
+					<top>188</top>
+					<width>309</width>
+					<height>180</height>
+					<onup>9000</onup>
+					<onleft>10</onleft>
+					<ondown>9002</ondown>
+					<control type="button" id="13">
+						<description>Add Rule Button</description>
+						<width>309</width>
+						<align>right</align>
+						<label>$LOCALIZE[15019]</label>
+						<font>font15</font>
+					</control>
+					<control type="button" id="14">
+						<description>Remove Rule Button</description>
+						<width>309</width>
+						<align>right</align>
+						<label>$LOCALIZE[1210]</label>
+						<font>font15</font>
+					</control>
+					<control type="button" id="15">
+						<description>Edit Rule Button</description>
+						<width>309</width>
+						<align>right</align>
+						<label>$LOCALIZE[21435]</label>
+						<font>font15</font>
+					</control>
+				</control>
+				<control type="grouplist" id="9002">
+					<top>369</top>
+					<height>240</height>
+					<onleft>97</onleft>
+					<onup>10</onup>
+					<ondown>19</ondown>
+					<control type="button" id="16">
+						<width>1500</width>
+						<label>$LOCALIZE[21424]</label>
+					</control>
+					<control type="button" id="17">
+						<width>1500</width>
+						<label>$LOCALIZE[21427]</label>
+					</control>
+					<control type="button" id="18">
+						<width>1500</width>
+						<label>$LOCALIZE[21429]</label>
+					</control>
+					<control type="button" id="23">
+						<width>1500</width>
+						<label>$LOCALIZE[21458]</label>
+					</control>
+				</control>
+				<control type="button" id="19">
+					<top>609</top>
+					<width>1191</width>
+					<height>60</height>
+					<align>right</align>
+					<onleft>97</onleft>
+					<onright condition="Control.IsEnabled(24)">24</onright>
+					<onup>23</onup>
+					<ondown>22</ondown>
+				</control>
+				<control type="label">
+					<top>609</top>
+					<width>1500</width>
+					<height>60</height>
+					<font>font14</font>
+					<textcolor>white</textcolor>
+					<textoffsetx>15</textoffsetx>
+					<label>$LOCALIZE[580]</label>
+					<animation effect="fade" start="100" end="95" condition="!Control.HasFocus(19)">Conditional</animation>
+				</control>
+				<control type="radiobutton" id="24">
+					<right>214</right>
+					<top>609</top>
+					<width>309</width>
+					<align>right</align>
+					<radioposx>204</radioposx>
+					<label>$LOCALIZE[21459]              </label>
+					<onleft>19</onleft>
+					<onup>23</onup>
+					<ondown>22</ondown>
+				</control>
+			</control>
+			<control type="button" id="20">
+				<description>Ok Button</description>
+				<include>HiddenObject</include>
+			</control>
+			<control type="button" id="21">
+				<description>Cancel Button</description>
+				<include>HiddenObject</include>
+			</control>
+		</control>
+		<include>DebugWindow</include>
+	</controls>
+</window>

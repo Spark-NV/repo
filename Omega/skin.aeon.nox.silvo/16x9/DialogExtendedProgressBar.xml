@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<include>NotifyOpenCloseAnimation</include>
+	<controls>
+		<control type="group">
+			<visible>!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsActive(startup) + !Window.IsVisible(DialogVolumeBar.xml) + !Window.IsVisible(DialogNotification.xml) + !Window.IsVisible(DialogBusy.xml)</visible>
+			<control type="image">
+				<top>20</top>
+				<width>100%</width>
+				<height>68</height>
+				<texture>shadow.png</texture>
+			</control>
+			<control type="progress" id="32">
+				<width>100%</width>
+				<height>68</height>
+				<texturebg>colors/black.png</texturebg>
+				<midtexture colordiffuse="$VAR[ThemeLabelColor]">colors/white50.png</midtexture>
+			</control>
+			<control type="label">
+				<width>100%</width>
+				<height>30</height>
+				<font>font13_title</font>
+				<textcolor>grey</textcolor>
+				<align>center</align>
+				<textoffsetx>20</textoffsetx>
+				<label>$INFO[Control.GetLabel(31)]</label>
+			</control>
+			<control type="label">
+				<top>30</top>
+				<width>100%</width>
+				<height>34</height>
+				<font>font13_title</font>
+				<textcolor>grey</textcolor>
+				<align>center</align>
+				<textoffsetx>20</textoffsetx>
+				<label>[B]$INFO[Control.GetLabel(30)]$INFO[Control.GetLabel(32),  -  ,%][/B]</label>
+			</control>
+			<control type="label" id="30">
+				<description>Header Label</description>
+				<include>HiddenObject</include>
+			</control>
+			<control type="label" id="31">
+				<include>HiddenObject</include>
+			</control>
+		</control>
+	</controls>
+</window>

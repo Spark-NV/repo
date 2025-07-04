@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1112" type="dialog">
+	<defaultcontrol always="true">64</defaultcontrol>
+	<onunload>ClearProperty(TextViewerHeader,Home)</onunload>
+	<onunload>ClearProperty(TextViewerSubHeader,Home)</onunload>
+	<onunload>ClearProperty(TextViewerContent,Home)</onunload>
+	<onunload>ClearProperty(AddonNews,Home)</onunload>
+	<controls>
+		<control type="button" id="64">
+			<oninfo>Dialog.Close(1112)</oninfo>
+			<onclick>Dialog.Close(1112)</onclick>
+			<onleft>Dialog.Close(1112)</onleft>
+			<onright>Dialog.Close(1112)</onright>
+			<onup>PageUp(61)</onup>
+			<ondown>PageDown(61)</ondown>
+			<include>HiddenObject</include>
+		</control>
+		<include content="DimBackground">
+			<param name="texture">colors/black75.png</param>
+			<param name="timeopen">100</param>
+			<param name="timeclose">50</param>
+			<param name="visible">!Window.IsActive(addoninformation)</param>
+		</include>
+		<control type="group">
+			<animation effect="slide" end="166,0" condition="Window.IsActive(addoninformation)">Conditional</animation>
+			<include condition="String.IsEmpty(Window(Home).Property(AddonNews))">DialogOpenCloseAnimation</include>
+			<animation effect="fade" time="100" delay="200" condition="!String.IsEmpty(Window(Home).Property(AddonNews))">WindowOpen</animation>
+			<animation effect="fade" time="50" condition="!String.IsEmpty(Window(Home).Property(AddonNews))">WindowClose</animation>
+			<left>270</left>
+			<top>72.5</top>
+			<include content="BackPanel">
+				<param name="left">16</param>
+				<param name="top">-4</param>
+				<param name="width">1350</param>
+				<param name="height">942</param>
+				<param name="texture">colors/black90.png</param>
+				<param name="visible">String.IsEmpty(Window(Home).Property(AddonNews))</param>
+			</include>
+			<control type="label">
+				<left>62</left>
+				<top>40</top>
+				<width>1256</width>
+				<height>40</height>
+				<font>font30_title</font>
+				<align>center</align>
+				<textcolor>dialogheader</textcolor>
+				<label>$INFO[Window(Home).Property(TextViewerHeader)]</label>
+			</control>
+			<control type="label">
+				<left>62</left>
+				<top>90</top>
+				<width>1256</width>
+				<height>40</height>
+				<font>font15</font>
+				<align>center</align>
+				<textcolor>$VAR[ThemeLabelColor]</textcolor>
+				<label>$INFO[Window(Home).Property(TextViewerSubHeader)]</label>
+			</control>
+			<control type="textbox">
+				<left>62</left>
+				<top>145</top>
+				<width>1256</width>
+				<height>750</height>
+				<align>justify</align>
+				<font>font16_textbox</font>
+				<textcolor>grey</textcolor>
+				<pagecontrol>61</pagecontrol>
+				<label>$INFO[Window(Home).Property(TextViewerContent)]</label>
+			</control>
+			<control type="scrollbar" id="61">
+				<left>1336</left>
+				<top>145</top>
+				<width>14</width>
+				<height>750</height>
+				<ondown>61</ondown>
+				<onup>61</onup>
+				<showonepage>false</showonepage>
+				<texturesliderbackground>colors/black90.png</texturesliderbackground>
+				<texturesliderbar colordiffuse="$VAR[HighlightBarColor]">colors/grey.png</texturesliderbar>
+				<animation effect="fade" start="80" end="40" time="1000" pulse="true" condition="Control.HasFocus(64)">Conditional</animation>
+			</control>
+		</control>
+		<include>DebugWindow</include>
+	</controls>
+</window>

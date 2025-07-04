@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">95</defaultcontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="group">
+			<top>59</top>
+			<include>WindowOpenCloseAnimation</include>
+			<include>SystemPanel</include>
+			<control type="grouplist" id="9000">
+				<left>81</left>
+				<top>32</top>
+				<width>355</width>
+				<height>720</height>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<onright>60</onright>
+				<control type="button" id="95">
+					<description>Button Summary Values</description>
+					<width>356</width>
+					<height>90</height>
+					<font>font15</font>
+					<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="3">colors/white50.png</texturefocus>
+					<label>$LOCALIZE[20037]</label>
+				</control>
+				<control type="button" id="94">
+					<description>Button Storage</description>
+					<width>356</width>
+					<height>90</height>
+					<font>font15</font>
+					<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="3">colors/white50.png</texturefocus>
+					<label>$LOCALIZE[13277]</label>
+				</control>
+				<control type="button" id="96">
+					<description>Button Network</description>
+					<width>356</width>
+					<height>90</height>
+					<font>font15</font>
+					<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="3">colors/white50.png</texturefocus>
+					<label>$LOCALIZE[13279]</label>
+				</control>
+				<control type="button" id="97">
+					<description>Button Video</description>
+					<width>356</width>
+					<height>90</height>
+					<font>font15</font>
+					<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="3">colors/white50.png</texturefocus>
+					<label>$LOCALIZE[13280]</label>
+				</control>
+				<control type="button" id="98">
+					<description>Button Hardware</description>
+					<width>356</width>
+					<height>90</height>
+					<font>font15</font>
+					<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="3">colors/white50.png</texturefocus>
+					<label>$LOCALIZE[13281]</label>
+				</control>
+				<control type="button" id="99">
+					<description>Button PVR</description>
+					<width>356</width>
+					<height>90</height>
+					<font>font15</font>
+					<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="3">colors/white50.png</texturefocus>
+					<label>$LOCALIZE[19191]</label>
+				</control>
+				<control type="button" id="100">
+					<description>Button Kodi Privacy Policy</description>
+					<width>356</width>
+					<height>90</height>
+					<font>font15</font>
+					<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="3">colors/white50.png</texturefocus>
+					<label>$LOCALIZE[12389]</label>
+				</control>
+				<control type="button" id="101">
+					<description>Button Thanks</description>
+					<width>356</width>
+					<height>90</height>
+					<font>font15</font>
+					<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="3">colors/white50.png</texturefocus>
+					<label>$LOCALIZE[12396]</label>
+				</control>
+			</control>
+			<control type="grouplist" id="9001">
+				<left>467</left>
+				<top>29.5</top>
+				<width>1371</width>
+				<height>720</height>
+				<onleft>9000</onleft>
+				<onright condition="Control.IsVisible(30)">60</onright>
+				<control type="label" id="2">
+					<description>Label 1</description>
+					<height>60</height>
+					<font>font13mono</font>
+				</control>
+				<control type="label" id="3">
+					<description>Label 2</description>
+					<height>60</height>
+					<font>font13mono</font>
+				</control>
+				<control type="label" id="4">
+					<description>Label 3</description>
+					<height>60</height>
+					<font>font13mono</font>
+				</control>
+				<control type="label" id="5">
+					<description>Label 4</description>
+					<height>60</height>
+					<font>font13mono</font>
+				</control>
+				<control type="label" id="6">
+					<description>Label 5</description>
+					<height>60</height>
+					<font>font13mono</font>
+				</control>
+				<control type="label" id="7">
+					<description>Label 6</description>
+					<height>60</height>
+					<font>font13mono</font>
+				</control>
+				<control type="label" id="8">
+					<description>Label 7</description>
+					<height>60</height>
+					<font>font13mono</font>
+				</control>
+				<control type="label" id="9">
+					<description>Label 8</description>
+					<height>60</height>
+					<font>font13mono</font>
+				</control>
+				<control type="label" id="10">
+					<description>Label 9</description>
+					<height>60</height>
+					<font>font13mono</font>
+				</control>
+				<control type="label" id="11">
+					<description>Label 10</description>
+					<height>60</height>
+					<font>font13mono</font>
+				</control>
+				<control type="label" id="12">
+					<description>Label 11</description>
+					<height>60</height>
+					<font>font13mono</font>
+				</control>
+				<control type="label" id="13">
+					<description>Label 12</description>
+					<height>60</height>
+					<font>font13mono</font>
+				</control>
+			</control>
+			<control type="textbox" id="30">
+				<left>465</left>
+				<top>52</top>
+				<width>1341</width>
+				<align>justify</align>
+				<height>695</height>
+				<textcolor>grey</textcolor>
+				<pagecontrol>60</pagecontrol>
+				<autoscroll>5000</autoscroll>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1824</left>
+				<top>32</top>
+				<width>14</width>
+				<height>719</height>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<ondown>60</ondown>
+				<onup>60</onup>
+				<showonepage>false</showonepage>
+				<texturesliderbackground>colors/black90.png</texturesliderbackground>
+				<texturesliderbar colordiffuse="$VAR[ThemeLabelColor]" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturesliderbarfocus>
+				<visible>Control.IsVisible(30)</visible>
+			</control>
+			<control type="group" id="102">
+				<left>437</left>
+				<top>20</top>
+				<control type="multiimage" id="103">
+					<top>100</top>
+					<width>1401</width>
+					<height>500</height>
+					<imagepath>special://xbmc/media/qr/kodilove/</imagepath>
+					<aspectratio>keep</aspectratio>
+					<timeperimage>7000</timeperimage>
+					<randomize>false</randomize>
+				</control>
+				<control type="textbox">
+					<left>115</left>
+					<top>620</top>
+					<width>1171</width>
+					<height>110</height>
+					<align>center</align>
+					<font>font13</font>
+					<label>$LOCALIZE[12397][CR][I][B]$LOCALIZE[12398][/B][/I]</label>
+				</control>
+			</control>
+			<control type="image">
+				<left>81</left>
+				<top>752</top>
+				<width>1757</width>
+				<height>1</height>
+				<texture colordiffuse="grey4">colors/white.png</texture>
+			</control>
+			<control type="image">
+				<left>81</left>
+				<top>752</top>
+				<width>355</width>
+				<height>90</height>
+				<aspectratio>keep</aspectratio>
+				<texture>xbmc-logo.png</texture>
+			</control>
+			<control type="group">
+				<left>466</left>
+				<top>755</top>
+				<control type="label">
+					<height>40</height>
+					<label>$INFO[System.BuildVersionShort,[B]$LOCALIZE[144] ,[/B]][LIGHT]$INFO[System.BuildVersionCode, (,)][/LIGHT]</label>
+				</control>
+				<control type="label">
+					<top>40</top>
+					<height>40</height>
+					<label>$INFO[System.BuildVersionGit,[B]Git: ,[/B]]$INFO[System.BuildDate, [LIGHT]$LOCALIZE[174] ,[/LIGHT]]</label>
+				</control>
+			</control>
+			<control type="group">
+				<left>467</left>
+				<top>895</top>
+				<control type="label">
+					<description>CPU Text</description>
+					<width>1341</width>
+					<height>30</height>
+					<label>$LOCALIZE[13271]</label>
+					<textcolor>grey</textcolor>
+					<font>font12_title</font>
+				</control>
+				<control type="label">
+					<description>CPU Text</description>
+					<width>1341</width>
+					<height>30</height>
+					<textcolor>grey</textcolor>
+					<font>font12_title</font>
+					<align>right</align>
+					<label>$INFO[System.CPUUsage]</label>
+				</control>
+				<control type="progress">
+					<description>CPU BAR</description>
+					<top>30</top>
+					<width>1341</width>
+					<height>24</height>
+					<texturebg border="2" infill="false" colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturebg>
+					<midtexture border="2" colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</midtexture>
+					<info>System.CPUUsage</info>
+				</control>
+				<control type="group">
+					<top>60</top>
+					<control type="label">
+						<description>Memory Text</description>
+						<width>1341</width>
+						<height>30</height>
+						<textcolor>grey</textcolor>
+						<font>font12_title</font>
+						<label>$LOCALIZE[31309]:</label>
+					</control>
+					<control type="label">
+						<description>CPU Text</description>
+						<width>1341</width>
+						<height>30</height>
+						<textcolor>grey</textcolor>
+						<font>font12_title</font>
+						<align>right</align>
+						<label>$INFO[system.memory(used)]$INFO[system.memory(total), / ]$INFO[system.memory(used.percent), - ]</label>
+					</control>
+					<control type="progress">
+						<description>Memory BAR</description>
+						<top>35</top>
+						<width>1341</width>
+						<height>24</height>
+						<texturebg border="2" infill="false" colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</texturebg>
+						<midtexture border="2" colordiffuse="$VAR[ThemeLabelColor]">colors/white.png</midtexture>
+						<info>system.memory(used)</info>
+					</control>
+				</control>
+			</control>
+		</control>
+		<include>Topbar</include>
+		<include>DebugWindow</include>
+	</controls>
+</window>

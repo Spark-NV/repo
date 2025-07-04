@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<default type="image">
+		<texture />
+	</default>
+	<default type="multiimage">
+		<aspectratio align="center">scale</aspectratio>
+		<fadetime>FanartCrossfadeTime</fadetime>
+		<include>FullscreenDimensions</include>
+		<randomize>true</randomize>
+	</default>
+	<default type="label">
+		<align>left</align>
+		<aligny>center</aligny>
+		<label />
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<selectedcolor>$VAR[ThemeLabelColor]</selectedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<scrollspeed>60</scrollspeed>
+	</default>
+	<default type="fadelabel">
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<scrollspeed>60</scrollspeed>
+	</default>
+	<default type="button">
+		<width>450</width>
+		<height>60</height>
+		<texturefocus border="1" colordiffuse="$VAR[HighlightBarColor]">colors/white50.png</texturefocus>
+		<font>font14</font>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>15</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="radiobutton">
+		<width>450</width>
+		<height>60</height>
+		<radiowidth>120</radiowidth>
+		<radioheight>76</radioheight>
+		<textureradioonfocus colordiffuse="$VAR[ThemeLabelColor]">android/radio_on.png</textureradioonfocus>
+		<textureradioonnofocus colordiffuse="$VAR[ThemeLabelColor]">android/radio_on.png</textureradioonnofocus>
+		<textureradioofffocus colordiffuse="grey">android/radio_off.png</textureradioofffocus>
+		<textureradiooffnofocus colordiffuse="grey">android/radio_off.png</textureradiooffnofocus>
+		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="1">colors/white50.png</texturefocus>
+		<textureradioondisabled colordiffuse="40FFFFFF">android/radio_on.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="40FFFFFF">android/radio_off.png</textureradiooffdisabled>
+		<font>font14</font>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>15</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="colorbutton">
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+		<width>1381</width>
+		<height>81</height>
+		<colorwidth>100</colorwidth>
+		<colorheight>40</colorheight>
+		<texturecolormask>colors/white.png</texturecolormask>
+		<texturecolordisabledmask colordiffuse="40FFFFFF">colors/white.png</texturecolordisabledmask>
+		<font>font15</font>
+		<textoffsetx>30</textoffsetx>
+		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="3">colors/white50.png</texturefocus>
+	</default>
+	<default type="togglebutton">
+		<width>30</width>
+		<height>60</height>
+		<textoffsetx>15</textoffsetx>
+		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="1">colors/white50.png</texturefocus>
+		<alttexturefocus colordiffuse="$VAR[HighlightBarColor]" border="1">colors/white50.png</alttexturefocus>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<label />
+		<aligny>center</aligny>
+		<font>font14</font>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="textbox">
+		<width>615</width>
+		<height>322</height>
+		<align>left</align>
+		<textcolor>white</textcolor>
+		<font>font15_textbox</font>
+	</default>
+	<default type="progress">
+		<lefttexture />
+		<righttexture />
+		<overlaytexture />
+		<texturebg>colors/blank.png</texturebg>
+		<midtexture colordiffuse="$VAR[ThemeOSDProgressColor]">colors/white50.png</midtexture>
+	</default>
+	<default type="spincontrol">
+		<textureup colordiffuse="grey">android/spin_up.png</textureup>
+		<texturedown colordiffuse="grey">android/spin_down.png</texturedown>
+		<textureupfocus colordiffuse="$VAR[HighlightBarColor]">android/spin_up.png</textureupfocus>
+		<texturedownfocus colordiffuse="$VAR[HighlightBarColor]">android/spin_down.png</texturedownfocus>
+		<texturedowndisabled colordiffuse="40FFFFFF">android/spin_down.png</texturedowndisabled>
+		<textureupdisabled colordiffuse="40FFFFFF">android/spin_up.png</textureupdisabled>
+		<align>right</align>
+		<width>40</width>
+		<height>25</height>
+		<font>font14</font>
+		<reverse>true</reverse>
+		<textcolor>grey</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<subtype>text</subtype>
+		<textoffsetx>0</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="spincontrolex">
+		<width>450</width>
+		<height>60</height>
+		<spinwidth>40</spinwidth>
+		<spinheight>25</spinheight>
+		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="1">colors/white50.png</texturefocus>
+		<textureup colordiffuse="grey">android/spin_up.png</textureup>
+		<texturedown colordiffuse="grey">android/spin_down.png</texturedown>
+		<textureupfocus colordiffuse="$VAR[HighlightBarColor]">android/spin_up.png</textureupfocus>
+		<texturedownfocus colordiffuse="$VAR[HighlightBarColor]">android/spin_down.png</texturedownfocus>
+		<texturedowndisabled colordiffuse="40FFFFFF">android/spin_down.png</texturedowndisabled>
+		<textureupdisabled colordiffuse="40FFFFFF">android/spin_up.png</textureupdisabled>
+		<font>font14</font>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<textoffsetx>15</textoffsetx>
+		<aligny>center</aligny>
+		<reverse>true</reverse>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="slider">
+		<orientation>horizontal</orientation>
+	</default>
+	<default type="sliderex">
+		<height>60</height>
+		<textoffsetx>15</textoffsetx>
+		<aligny>center</aligny>
+		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="1">colors/white50.png</texturefocus>
+		<sliderwidth>150</sliderwidth>
+		<sliderheight>28</sliderheight>
+		<texturesliderbar>buttons/slider-back.png</texturesliderbar>
+		<textureslidernib>buttons/slider-nib.png</textureslidernib>
+		<textureslidernibfocus colordiffuse="$VAR[ThemeLabelColor]">buttons/slider-nib.png</textureslidernibfocus>
+		<font>font14</font>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<pulseonselect>false</pulseonselect>
+		<scrollspeed>60</scrollspeed>
+	</default>
+	<default type="mover">
+		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="1">colors/white50.png</texturefocus>
+		<pulseonselect>false</pulseonselect>
+		<movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
+			<eventconfig type="up" />
+			<eventconfig type="down" />
+			<eventconfig type="left" />
+			<eventconfig type="right" />
+		</movingspeed>
+	</default>
+	<default type="resize">
+		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="1">colors/white50.png</texturefocus>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="edit">
+		<width>450</width>
+		<height>60</height>
+		<texturefocus colordiffuse="$VAR[HighlightBarColor]" border="1">colors/white50.png</texturefocus>
+		<font>font14</font>
+		<textcolor>grey</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>grey3</disabledcolor>
+		<invalidcolor>invalid</invalidcolor>
+		<textoffsetx>15</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="grouplist">
+		<itemgap>0</itemgap>
+	</default>
+</includes>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1135" type="window">
+	<onload condition="String.IsEqual(Window(Home).Property(ActiveWindow),videos)">ReplaceWindow(videos,$ESCINFO[Window(Home).Property(ContainerPath)],return)</onload>
+	<onload condition="String.IsEqual(Window(Home).Property(ActiveWindow),music)">ReplaceWindow(music,$ESCINFO[Window(Home).Property(ContainerPath)],return)</onload>
+	<onload condition="String.IsEqual(Window(Home).Property(ActiveWindow),1125)">ReplaceWindow(1125)</onload>
+	<onload condition="String.IsEqual(Window(Home).Property(ActiveWindow),videoplaylist)">ReplaceWindow(videoplaylist)</onload>
+	<onload condition="String.IsEqual(Window(Home).Property(ActiveWindow),musicplaylist)">ReplaceWindow(musicplaylist)</onload>
+	<onload condition="String.IsEqual(Window(Home).Property(ActiveWindow),addonbrowser)">ReplaceWindow(addonbrowser)</onload>
+	<onload condition="String.IsEqual(Window(Home).Property(ActiveWindow),programs)">ReplaceWindow(programs)</onload>
+	<onload condition="String.IsEqual(Window(Home).Property(ActiveWindow),tvguide)">ReplaceWindow(tvguide)</onload>
+	<!-- <onload condition="String.IsEqual(Window(Home).Property(ActiveWindow),skinsetting)">ReplaceWindow(skinsetting)</onload> -->
+	<onunload>ClearProperty(ContainerPath,Home)</onunload>
+	<onunload>ClearProperty(ReplaceWindow,Home)</onunload>
+	<controls />
+</window>

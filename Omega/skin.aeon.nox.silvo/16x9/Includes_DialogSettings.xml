@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="DialogPanel">
+		<param name="icon_visible" default="true" />
+		<param name="has_inner" default="false" />
+		<param name="close_onclick" default="back" />
+		<param name="ok_visible" default="false" />
+		<param name="more_visible" default="false" />
+		<param name="ondown_condition" default="true" />
+		<param name="ondown_condition2" default="false" />
+		<param name="onup_condition" default="false" />
+		<definition>
+			<control type="image">
+				<left>-4</left>
+				<top>-4</top>
+				<width>1508</width>
+				<height>$PARAM[height]</height>
+				<texture border="4">colors/black.png</texture>
+				<bordersize>4</bordersize>
+				<bordertexture border="4" infill="false" colordiffuse="$VAR[ThemeBorderColor]">colors/white.png</bordertexture>
+				<visible>$PARAM[icon_visible]</visible>
+			</control>
+			<control type="image">
+				<left>-4</left>
+				<top>-4</top>
+				<width>968</width>
+				<height>$PARAM[height]</height>
+				<texture border="4">colors/black.png</texture>
+				<bordersize>4</bordersize>
+				<bordertexture border="4" infill="false" colordiffuse="$VAR[ThemeBorderColor]">colors/white.png</bordertexture>
+				<visible>!$PARAM[icon_visible]</visible>
+			</control>
+			<control type="label" id="$PARAM[header_id]">
+				<description>Header label</description>
+				<width>1345</width>
+				<height>70</height>
+				<font>font16_title_bold</font>
+				<textoffsetx>15</textoffsetx>
+				<align>left</align>
+				<label>$PARAM[header_label]</label>
+				<textcolor>dialogheader</textcolor>
+				<visible>$PARAM[icon_visible]</visible>
+			</control>
+			<control type="label" id="$PARAM[header_id]">
+				<description>Header label</description>
+				<width>805</width>
+				<height>70</height>
+				<font>font16_title_bold</font>
+				<textoffsetx>15</textoffsetx>
+				<align>left</align>
+				<label>$PARAM[header_label]</label>
+				<textcolor>dialogheader</textcolor>
+				<visible>!$PARAM[icon_visible]</visible>
+			</control>
+			<control type="grouplist" id="90000">
+				<left>1305</left>
+				<width>210</width>
+				<align>right</align>
+				<orientation>horizontal</orientation>
+				<animation effect="slide" end="-540" condition="!$PARAM[icon_visible]">Conditional</animation>
+				<onup condition="$PARAM[onup_condition]">$PARAM[buttons_onup]</onup>
+				<control type="button" id="98">
+					<description>More... button</description>
+					<texturefocus />
+					<texturenofocus />
+					<textoffsetx />
+					<width>70</width>
+					<height>70</height>
+					<font>IconMediumMD</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>shadow</shadowcolor>
+					<focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+					<label>$VAR[DialogSettingsMoreButtonLabelVar]</label>
+					<onclick>$PARAM[more_onclick]</onclick>
+					<ondown condition="$PARAM[ondown_condition]">$PARAM[buttons_ondown]</ondown>
+					<ondown condition="$PARAM[ondown_condition2]">$PARAM[buttons_ondown2]</ondown>
+					<visible>$PARAM[more_visible]</visible>
+				</control>
+				<control type="button" id="95">
+					<description>Ok button</description>
+					<texturefocus />
+					<texturenofocus />
+					<textoffsetx />
+					<width>70</width>
+					<height>70</height>
+					<font>IconMediumMD</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>shadow</shadowcolor>
+					<focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+					<label>$VAR[DialogSettingsOkButtonLabelVar]</label>
+					<onclick>$PARAM[ok_onclick]</onclick>
+					<ondown condition="$PARAM[ondown_condition]">$PARAM[buttons_ondown]</ondown>
+					<ondown condition="$PARAM[ondown_condition2]">$PARAM[buttons_ondown2]</ondown>
+					<visible>$PARAM[ok_visible]</visible>
+				</control>
+				<control type="button" id="97">
+					<description>Cancel button</description>
+					<texturefocus />
+					<texturenofocus />
+					<textoffsetx />
+					<width>70</width>
+					<height>70</height>
+					<font>IconMediumMD</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>shadow</shadowcolor>
+					<focusedcolor>$VAR[HighlightBarColor]</focusedcolor>
+					<label></label>
+					<onclick>$PARAM[close_onclick]</onclick>
+					<ondown condition="$PARAM[ondown_condition]">$PARAM[buttons_ondown]</ondown>
+					<ondown condition="$PARAM[ondown_condition2]">$PARAM[buttons_ondown2]</ondown>
+				</control>
+			</control>
+			<control type="image">
+				<left>1</left>
+				<top>67</top>
+				<width>1498</width>
+				<height>1</height>
+				<texture colordiffuse="grey4">colors/white.png</texture>
+				<visible>$PARAM[icon_visible]</visible>
+			</control>
+			<control type="image">
+				<left>1</left>
+				<top>67</top>
+				<width>958</width>
+				<height>1</height>
+				<texture colordiffuse="grey4">colors/white.png</texture>
+				<visible>!$PARAM[icon_visible]</visible>
+			</control>
+			<control type="image">
+				<left>968</left>
+				<top>68</top>
+				<width>2</width>
+				<height>540</height>
+				<texture colordiffuse="grey4">colors/white.png</texture>
+				<visible>$PARAM[has_inner]</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="VideoOSDSettings">
+		<control type="radiobutton" id="90201">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31061]</label>
+			<onclick>Skin.ToggleSetting(hide_chapternames)</onclick>
+			<selected>!Skin.HasSetting(hide_chapternames)</selected>
+		</control>
+		<control type="button" id="90202">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>$LOCALIZE[31577]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[AutoHideVideoOSDLabelVar][/COLOR]</label2>
+			<onclick>SetProperty(CustomSelect,autohidevideoosd,Home)</onclick>
+			<onclick>ActivateWindow(1129)</onclick>
+		</control>
+		<control type="radiobutton" id="90203">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31508]</label>
+			<onclick>Skin.ToggleSetting(VideoOSDOnTop)</onclick>
+			<selected>Skin.HasSetting(VideoOSDOnTop)</selected>
+		</control>
+		<control type="radiobutton" id="90204">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31606]</label>
+			<onclick>Skin.ToggleSetting(Disable.FullscreenInfoLogo)</onclick>
+			<selected>!Skin.HasSetting(Disable.FullscreenInfoLogo)</selected>
+			<visible>![Window.IsVisible(seekbar) + VideoPlayer.Content(LiveTV)]</visible>
+		</control>
+		<control type="radiobutton" id="90205">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[20021]</label>
+			<onclick>Skin.ToggleSetting(Disable.FullscreenPoster)</onclick>
+			<selected>!Skin.HasSetting(Disable.FullscreenPoster)</selected>
+			<visible>![Window.IsVisible(seekbar) + VideoPlayer.Content(LiveTV)]</visible>
+		</control>
+		<control type="radiobutton" id="90206">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>   - $LOCALIZE[31609]</label>
+			<onclick>Skin.ToggleSetting(Disable.FullscreenDiscart)</onclick>
+			<selected>!Skin.HasSetting(Disable.FullscreenDiscart)</selected>
+			<visible>!Skin.HasSetting(Disable.FullscreenPoster)</visible>
+			<visible>![Window.IsVisible(seekbar) + VideoPlayer.Content(LiveTV)]</visible>
+		</control>
+		<control type="radiobutton" id="90207">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31605]</label>
+			<onclick>Skin.ToggleSetting(SwapFullscreenInfo)</onclick>
+			<selected>Skin.HasSetting(SwapFullscreenInfo)</selected>
+			<visible>Skin.HasSetting(Disable.FullscreenPoster)</visible>
+			<visible>![Window.IsVisible(seekbar) + VideoPlayer.Content(LiveTV)]</visible>
+		</control>
+		<control type="radiobutton" id="90208">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31586]</label>
+			<onclick>Skin.ToggleSetting(CleanPauseScreen)</onclick>
+			<selected>Skin.HasSetting(CleanPauseScreen)</selected>
+		</control>
+		<control type="radiobutton" id="90209">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31437]</label>
+			<onclick>Skin.ToggleSetting(PausedLabel)</onclick>
+			<selected>Skin.HasSetting(PausedLabel)</selected>
+			<visible>!Skin.HasSetting(CleanPauseScreen)</visible>
+		</control>
+		<control type="radiobutton" id="90210">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31351]</label>
+			<onclick>Skin.ToggleSetting(Disable.Netflix.Pause)</onclick>
+			<selected>!Skin.HasSetting(Disable.Netflix.Pause)</selected>
+			<visible>![Window.IsVisible(seekbar) + VideoPlayer.Content(LiveTV)]</visible>
+		</control>
+		<control type="button" id="90211">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>$LOCALIZE[31224]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[OSDRightLabelOnclickLabelVar][/COLOR]</label2>
+			<onclick>$VAR[OSDRightLabelOnclickVar]</onclick>
+			<visible>![Window.IsVisible(seekbar) + VideoPlayer.Content(LiveTV)]</visible>
+		</control>
+		<control type="radiobutton" id="90212">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31266]</label>
+			<onclick>Skin.ToggleSetting(Disable.PlayerControlButtons)</onclick>
+			<selected>Skin.HasSetting(Disable.PlayerControlButtons)</selected>
+		</control>
+		<control type="radiobutton" id="90213">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31513]</label>
+			<onclick>Skin.ToggleSetting(Enable.AddonInfo)</onclick>
+			<selected>Skin.HasSetting(Enable.AddonInfo)</selected>
+		</control>
+	</include>
+	<include name="MusicOSDSettings">
+		<control type="button" id="90201">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>$LOCALIZE[31577]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[AutoHideMusicOSDLabelVar][/COLOR]</label2>
+			<onclick>SetProperty(CustomSelect,autohidemusicosd,Home)</onclick>
+			<onclick>ActivateWindow(1129)</onclick>
+		</control>
+		<control type="button" id="90218">
+			<description>Background Button</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>$LOCALIZE[31102]:</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[VizBackgroundLabelVar][/COLOR]</label2>
+			<onclick>SetProperty(CustomSelect,musicvizbackground,Home)</onclick>
+			<onclick>ActivateWindow(1129)</onclick>
+		</control>
+		<control type="button" id="90202">
+			<description>Artist Slideshow Settings Button</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>   - $INFO[System.AddonTitle(script.artistslideshow)] $LOCALIZE[5]</label>
+			<onclick>Addon.OpenSettings(script.artistslideshow)</onclick>
+			<visible>String.IsEqual(Skin.String(Viz.Background),3) + System.AddonIsEnabled(script.artistslideshow)</visible>
+		</control>
+		<control type="button" id="90203">
+			<description>Artist Slideshow Settings Button</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>   - $LOCALIZE[31438]</label>
+			<onclick condition="!System.HasAddon(script.artistslideshow)">InstallAddon(script.artistslideshow)</onclick>
+			<onclick condition="!System.AddonIsEnabled(script.artistslideshow)">EnableAddon(script.artistslideshow)</onclick>
+			<visible>String.IsEqual(Skin.String(Viz.Background),3) + [!System.HasAddon(script.artistslideshow) | !System.AddonIsEnabled(script.artistslideshow)]</visible>
+		</control>
+		<control type="button" id="90204">
+			<description>CU Lyrics Settings</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>$INFO[System.AddonTitle(script.cu.lrclyrics),, $LOCALIZE[5]]</label>
+			<onclick>Addon.OpenSettings(script.cu.lrclyrics)</onclick>
+			<visible>System.HasAddon(script.cu.lrclyrics) + System.AddonIsEnabled(script.cu.lrclyrics)</visible>
+		</control>
+		<control type="radiobutton" id="90219">
+			<description>CU Lyrics background dim</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label> - $LOCALIZE[31027]</label>
+			<onclick>Skin.ToggleSetting(HideLyricsBackground)</onclick>
+			<selected>!Skin.HasSetting(HideLyricsBackground)</selected>
+			<visible>System.HasAddon(script.cu.lrclyrics) + System.AddonIsEnabled(script.cu.lrclyrics) + Skin.HasSetting(Disable.VideoLyrics)</visible>
+		</control>
+		<control type="radiobutton" id="90205">
+			<description>Hide Player Controls</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31266]</label>
+			<onclick>Skin.ToggleSetting(Disable.MusicPlayerControlButtons)</onclick>
+			<selected>Skin.HasSetting(Disable.MusicPlayerControlButtons)</selected>
+		</control>
+		<control type="radiobutton" id="90206">
+			<description>Disable logo</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31606]</label>
+			<onclick>Skin.ToggleSetting(Disable.MusicVizLogo)</onclick>
+			<selected>!Skin.HasSetting(Disable.MusicVizLogo)</selected>
+		</control>
+		<control type="radiobutton" id="90207">
+			<description>Background Button</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31129]</label>
+			<onclick>Skin.ToggleSetting(HideVisualizationFanart)</onclick>
+			<selected>Skin.HasSetting(HideVisualizationFanart)</selected>
+			<enable>Visualisation.Enabled + ![String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,opengl spectrum) | String.IsEqual(Visualisation.Name,directx spectrum)]</enable>
+		</control>
+		<control type="radiobutton" id="90208">
+			<description>Time/Date Button</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31267]</label>
+			<onclick>Skin.ToggleSetting(Disable.MusicVizTime)</onclick>
+			<selected>Skin.HasSetting(Disable.MusicVizTime)</selected>
+		</control>
+		<control type="radiobutton" id="90209">
+			<description>Big Ass Label Button</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31042]</label>
+			<onclick>Skin.ToggleSetting(BigAssLabel)</onclick>
+			<selected>Skin.HasSetting(BigAssLabel)</selected>
+		</control>
+		<control type="button" id="90210">
+			<description>Artist Info Button</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>$LOCALIZE[31108]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[VizArtistInfoVar][/COLOR]</label2>
+			<onclick condition="!Skin.HasSetting(Enable.VizInfo) + !Skin.HasSetting(Enable.VizPersistent)">Skin.SetBool(Enable.VizInfo)</onclick>
+			<onclick condition="Skin.HasSetting(Enable.VizInfo)">Skin.SetBool(Enable.VizPersistent)</onclick>
+			<onclick condition="Skin.HasSetting(Enable.VizInfo)">Skin.Reset(Enable.VizInfo)</onclick>
+			<onclick condition="Skin.HasSetting(Enable.VizPersistent)">Skin.Reset(Enable.VizPersistent)</onclick>
+			<visible>System.HasAddon(script.artistslideshow) + System.AddonIsEnabled(script.artistslideshow)</visible>
+		</control>
+		<control type="radiobutton" id="90211">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31971]</label>
+			<onclick condition="!Skin.HasSetting(hidevizbehindfanart) + !Skin.HasSetting(WarnedOnHidingViz)">SetProperty(NotWarnedOnHidingViz,True,Home)</onclick>
+			<onclick condition="!Skin.HasSetting(hidevizbehindfanart) + !Skin.HasSetting(WarnedOnHidingViz)">ActivateWindow(1126)</onclick>
+			<onclick condition="Skin.HasSetting(hidevizbehindfanart) | Skin.HasSetting(WarnedOnHidingViz)">Skin.ToggleSetting(hidevizbehindfanart)</onclick>
+			<selected>Skin.HasSetting(hidevizbehindfanart)</selected>
+		</control>
+		<control type="button" id="90212">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>$LOCALIZE[31187]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[MusicVizLayoutOnclickLabelVar][/COLOR]</label2>
+			<onclick>$VAR[MusicVizLayoutOnclickVar]</onclick>
+		</control>
+		<control type="radiobutton" id="90213">
+			<description>Hide album</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31268]</label>
+			<onclick>Skin.ToggleSetting(HideMusicVizAlbum)</onclick>
+			<selected>Skin.HasSetting(HideMusicVizAlbum)</selected>
+			<visible>!String.IsEqual(Skin.String(MusicVizLayout),2)</visible>
+		</control>
+		<control type="radiobutton" id="90214">
+			<description>Hide CD</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31347]</label>
+			<onclick>Skin.ToggleSetting(HideMusicVizCD)</onclick>
+			<selected>Skin.HasSetting(HideMusicVizCD)</selected>
+			<visible>!String.IsEqual(Skin.String(MusicVizLayout),2)</visible>
+		</control>
+		<control type="radiobutton" id="90215">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31235]</label>
+			<onclick>Skin.ToggleSetting(SlideMusicLabelsLeft)</onclick>
+			<selected>Skin.HasSetting(SlideMusicLabelsLeft)</selected>
+			<visible>[Skin.HasSetting(HideMusicVizAlbum) | Skin.HasSetting(HideMusicVizCD)] + String.IsEqual(Skin.String(MusicVizLayout),1)</visible>
+		</control>
+		<control type="radiobutton" id="90216">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31236]</label>
+			<onclick>Skin.ToggleSetting(SlideMusicLabelsRight)</onclick>
+			<selected>Skin.HasSetting(SlideMusicLabelsRight)</selected>
+			<visible>[Skin.HasSetting(HideMusicVizAlbum) | Skin.HasSetting(HideMusicVizCD)] + String.IsEmpty(Skin.String(MusicVizLayout))</visible>
+		</control>
+		<control type="radiobutton" id="90217">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31269]</label>
+			<onclick>Skin.ToggleSetting(Disable.MusicPlayerNextTrack)</onclick>
+			<selected>Skin.HasSetting(Disable.MusicPlayerNextTrack)</selected>
+			<visible>String.IsEqual(Skin.String(MusicVizLayout),1)</visible>
+		</control>
+	</include>
+	<include name="VideoInfoSettings">
+		<control type="button" id="90201">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>$LOCALIZE[31007]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[VideoInfoCastLabel2Var][/COLOR]</label2>
+			<onclick>Skin.ToggleSetting(OnlineCast)</onclick>
+			<visible>System.AddonIsEnabled(plugin.video.themoviedb.helper)</visible>
+		</control>
+		<control type="radiobutton" id="90202">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31487]</label>
+			<onclick>Skin.ToggleSetting(MoreVideoInfoDetails)</onclick>
+			<selected>Skin.HasSetting(MoreVideoInfoDetails)</selected>
+		</control>
+		<control type="radiobutton" id="90203">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31494]</label>
+			<onclick>Skin.ToggleSetting(Disable.VideoInfoPathDetails)</onclick>
+			<selected>Skin.HasSetting(Disable.VideoInfoPathDetails)</selected>
+		</control>
+		<control type="radiobutton" id="90204">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31623]</label>
+			<onclick>Skin.ToggleSetting(Disable.VideoInfoLanguageDetails)</onclick>
+			<selected>Skin.HasSetting(Disable.VideoInfoLanguageDetails)</selected>
+		</control>
+		<control type="button" id="90205">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>$LOCALIZE[31931]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[VideoPlotLocalizeVar][/COLOR]</label2>
+			<onclick>Skin.ToggleSetting(VideoInfoPlotToggle)</onclick>
+		</control>
+		<control type="radiobutton" id="90206">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31541]</label>
+			<onclick>Skin.ToggleSetting(SetInfoPlotToggle)</onclick>
+			<selected>!Skin.HasSetting(SetInfoPlotToggle)</selected>
+		</control>
+		<control type="button" id="90207">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>$LOCALIZE[31990]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[CinemaVisionButtonOnclickLabelVar][/COLOR]</label2>
+			<onclick>$VAR[CinemaVisionButtonOnclickVar]</onclick>
+			<visible>System.AddonIsEnabled(script.preshowexperience)</visible>
+		</control>
+		<control type="radiobutton" id="90208">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<onclick>Skin.ToggleSetting(Enable.ExtendedInfoIntergration)</onclick>
+			<onclick>Dialog.Close(1119)</onclick>
+			<onclick>Dialog.Close(movieinformation)</onclick>
+			<selected>Skin.HasSetting(Enable.ExtendedInfoIntergration)</selected>
+			<label>$LOCALIZE[31127] ($LOCALIZE[342])</label>
+		</control>
+		<control type="radiobutton" id="90209">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<onclick>Skin.ToggleSetting(Enable.ExtendedInfoTVIntergration)</onclick>
+			<onclick>Dialog.Close(1119)</onclick>
+			<onclick>Dialog.Close(movieinformation)</onclick>
+			<selected>Skin.HasSetting(Enable.ExtendedInfoTVIntergration)</selected>
+			<label>$LOCALIZE[31127] ($LOCALIZE[20343])</label>
+		</control>
+		<control type="radiobutton" id="90210">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<onclick>Skin.ToggleSetting(Enable.BlurredVideoInfo)</onclick>
+			<selected>Skin.HasSetting(Enable.BlurredVideoInfo)</selected>
+			<label>$LOCALIZE[31174]</label>
+			<visible>System.AddonIsEnabled(plugin.video.themoviedb.helper)</visible>
+		</control>
+		<control type="button" id="90211">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>$LOCALIZE[31442]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[DialogInfoDimmerLabelVar][/COLOR]</label2>
+			<onclick>SetProperty(CustomSelect,dialoginfodimmer,Home)</onclick>
+			<onclick>ActivateWindow(1129)</onclick>
+			<visible>!Skin.HasSetting(Enable.BlurredVideoInfo)</visible>
+		</control>
+		<control type="radiobutton" id="90212">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<onclick>Skin.ToggleSetting(discartoninfo)</onclick>
+			<selected>Skin.HasSetting(discartoninfo)</selected>
+			<label>$LOCALIZE[31601]</label>
+		</control>
+		<control type="radiobutton" id="90213">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<onclick>Skin.ToggleSetting(CharacterOnInfo)</onclick>
+			<selected>Skin.HasSetting(CharacterOnInfo)</selected>
+			<label>$LOCALIZE[31507]</label>
+		</control>
+		<control type="radiobutton" id="90214">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<onclick>Skin.ToggleSetting(TMDbHelper.HideBudgetRevenue)</onclick>
+			<selected>Skin.HasSetting(TMDbHelper.HideBudgetRevenue)</selected>
+			<label>$LOCALIZE[31596]</label>
+			<visible>System.AddonIsEnabled(plugin.video.themoviedb.helper)</visible>
+		</control>
+	</include>
+	<include name="LiveTVSettings">
+		<!-- GUIDE TIMELINE SETTINGS -->
+		<control type="label" id="90202">
+			<width>1498</width>
+			<height>60</height>
+			<textoffsetx>20</textoffsetx>
+			<font>font13_title</font>
+			<label>$LOCALIZE[31131]</label>
+			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+		</control>
+		<control type="button" id="90201">
+			<description>Guide timeline view type</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>$LOCALIZE[31134]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[GuideTimelineViewTypeOptionsLabelVar][/COLOR]</label2>
+			<onclick>$VAR[GuideTimelineViewTypeOptionsClickVar]</onclick>
+			<include condition="Window.IsActive(tvguide)">ReloadWindowOnclick</include>
+		</control>
+		<control type="button" id="90203">
+			<description>Guide logos</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>$LOCALIZE[31606]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[GuideLogoOptionsLabelVar][/COLOR]</label2>
+			<onclick>SetProperty(CustomSelect,pvrguidelogos,Home)</onclick>
+			<onclick>ActivateWindow(1129)</onclick>
+		</control>
+		<control type="radiobutton" id="90204">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31395]</label>
+			<onclick>Skin.ToggleSetting(Enable.PVRGenreColors)</onclick>
+			<selected>Skin.HasSetting(Enable.PVRGenreColors)</selected>
+		</control>
+		<!-- INFOBAR SETTINGS -->
+		<control type="label" id="90205">
+			<width>1498</width>
+			<height>60</height>
+			<textoffsetx>20</textoffsetx>
+			<font>font13_title</font>
+			<label>$LOCALIZE[31135]</label>
+			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+		</control>
+		<control type="radiobutton" id="90206">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31512]</label>
+			<onclick>Skin.ToggleSetting(Enable.RecordingInfo)</onclick>
+			<selected>Skin.HasSetting(Enable.RecordingInfo)</selected>
+		</control>
+		<control type="button" id="90207">
+			<description>Infobar types</description>
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<label>$LOCALIZE[31136]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[LiveTvInfobarTypeOptionsLabelVar][/COLOR]</label2>
+			<onclick>$VAR[LiveTvInfobarTypeOptionsClickVar]</onclick>
+		</control>
+		<control type="radiobutton" id="90208">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31137]</label>
+			<onclick>Skin.ToggleSetting(infobar_hidetencrypt)</onclick>
+			<selected>Skin.HasSetting(infobar_hidetencrypt)</selected>
+			<visible>!String.IsEqual(Skin.String(LiveTV.InfobarType),1)</visible>
+		</control>
+		<control type="radiobutton" id="90209">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31138]</label>
+			<onclick>Skin.ToggleSetting(infobar_hidetuners)</onclick>
+			<selected>Skin.HasSetting(infobar_hidetuners)</selected>
+			<visible>!String.IsEqual(Skin.String(LiveTV.InfobarType),1)</visible>
+		</control>
+		<control type="radiobutton" id="90210">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31139]</label>
+			<onclick>Skin.ToggleSetting(infobar_hidesignalinfo)</onclick>
+			<selected>Skin.HasSetting(infobar_hidesignalinfo)</selected>
+			<visible>!String.IsEqual(Skin.String(LiveTV.InfobarType),1)</visible>
+		</control>
+		<!-- SIDEBLADE SETTINGS -->
+		<control type="label" id="90211">
+			<width>1498</width>
+			<height>60</height>
+			<textoffsetx>20</textoffsetx>
+			<font>font13_title</font>
+			<label>$LOCALIZE[31140]</label>
+			<textcolor>$VAR[ThemeLabelColor]</textcolor>
+		</control>
+		<control type="radiobutton" id="90212">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31570]</label>
+			<onclick>Skin.ToggleSetting(Disable.PVRChannels)</onclick>
+			<selected>Skin.HasSetting(Disable.PVRChannels)</selected>
+		</control>
+		<control type="radiobutton" id="90213">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31141]</label>
+			<onclick>Skin.ToggleSetting(Disable.PVRGuide)</onclick>
+			<selected>Skin.HasSetting(Disable.PVRGuide)</selected>
+		</control>
+		<control type="radiobutton" id="90214">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31143]</label>
+			<onclick>Skin.ToggleSetting(Disable.PVRRecordings)</onclick>
+			<selected>Skin.HasSetting(Disable.PVRRecordings)</selected>
+		</control>
+		<control type="radiobutton" id="90215">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31144]</label>
+			<onclick>Skin.ToggleSetting(Disable.PVRTimer)</onclick>
+			<selected>Skin.HasSetting(Disable.PVRTimer)</selected>
+		</control>
+		<control type="radiobutton" id="90216">
+			<width>1498</width>
+			<textoffsetx>20</textoffsetx>
+			<radioposx>1388</radioposx>
+			<label>$LOCALIZE[31145]</label>
+			<onclick>Skin.ToggleSetting(Disable.PVRSearch)</onclick>
+			<selected>Skin.HasSetting(Disable.PVRSearch)</selected>
+		</control>
+	</include>
+	<include name="DialogProgress">
+		<control type="progress">
+			<left>1</left>
+			<width>907</width>
+			<height>67</height>
+			<info>System.Progressbar</info>
+		</control>
+		<control type="image">
+			<left>1</left>
+			<top>68</top>
+			<width>908</width>
+			<height>1</height>
+			<texture colordiffuse="grey4">colors/white.png</texture>
+		</control>
+	</include>
+	<!-- View Settings -->
+	<include name="ViewSettingsButtons">
+		<!-- Top Settings -->
+		<!-- Button IDs (1500-1509) -->
+		<!-- TopBar -->
+		<control type="button" id="1500">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31252]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[NoTopBarOnclickLabelVar][/COLOR]</label2>
+			<onclick>$VAR[NoTopBarOnclickVar]</onclick>
+			<visible>!Skin.HasSetting(Disable.TopBar)</visible>
+		</control>
+		<!-- Watched Status Indicators -->
+		<control type="button" id="1501">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31188]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[DisableOverlayOnclickLabelVar][/COLOR]</label2>
+			<onclick>$VAR[DisableOverlayOnclickVar]</onclick>
+			<visible>[!Skin.HasSetting(Disable.Resumable) | !Skin.HasSetting(Disable.OverlayWatched) | !Skin.HasSetting(Disable.OverlayUnwatched)] + !Window.IsActive(music) + !Window.IsActive(programs) + !Container.Content(genres)</visible>
+			<visible>[String.IsEqual(Window(Home).Property(actualViewtype),Landscape) | String.IsEqual(Window(Home).Property(actualViewtype),ShowCase) | String.IsEqual(Window(Home).Property(actualViewtype),MyFlix) | String.IsEqual(Window(Home).Property(actualViewtype),Icons) | String.IsEqual(Window(Home).Property(actualViewtype),Wall) | [String.IsEqual(Window(Home).Property(actualViewtype),FullscreenWall) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets)]] | String.IsEqual(Window(Home).Property(actualViewtype),InfoWall) | String.IsEqual(Window(Home).Property(actualViewtype),BannerWall) | String.IsEqual(Window(Home).Property(actualViewtype),BigList) | String.IsEqual(Window(Home).Property(actualViewtype),Shift) | String.IsEqual(Window(Home).Property(actualViewtype),Posters) | String.IsEqual(Window(Home).Property(actualViewtype),BigFan) | String.IsEqual(Window(Home).Property(actualViewtype),Gallery)]</visible>
+		</control>
+		<!-- Mediaflags -->
+		<control type="button" id="1502">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31255]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[ViewFlagsOnclickLabelVar][/COLOR]</label2>
+			<onclick>$VAR[ViewFlagsOnclickVar]</onclick>
+			<visible>!Container.Content(genres) + !Container.Content(sets)</visible>
+			<visible>String.IsEqual(Window(Home).Property(actualViewtype),ShowCase) | [String.IsEqual(Window(Home).Property(actualViewtype),Landscape) + !Window.IsActive(music)] | [String.IsEqual(Window(Home).Property(actualViewtype),Wall) + ![Container.Content(programs) | Container.Content(addons) | Window.IsActive(music)]] | String.IsEqual(Window(Home).Property(actualViewtype),Logo)</visible>
+		</control>
+		<!-- <control type="radiobutton" id="1503">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31255]</label>
+			<onclick></onclick>
+			<selected></selected>
+			<visible></visible>
+		</control> -->
+		<!-- View Settings -->
+		<!-- Button IDs (1510-1549) -->
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),List)">ListViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),InfoWall)">InfoWallViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),Landscape)">LandscapeViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),ShowCase)">ShowCaseViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),ShowCaseSquare)">ShowCaseSquareViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),TriPanel)">TriPanelViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),Posters)">PostersViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),Shift)">ShiftViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),BannerWall)">BannerWallViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),Logo)">LogoViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),Icons)">IconsViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),LowList)">LowListViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),Episode)">EpisodeViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),Wall)">WallViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),Gallery)">GalleryViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),Panel)">PanelViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),RightList)">RightListViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),BigList)">BigListViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),SongList)">SongListViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),MyFlix)">MyFlixViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),BigFan)">BigFanViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),FanartList)">FanartListViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),MusicJukeBox)">MusicJukeBoxViewSettings</include>
+		<include condition="String.IsEqual(Window(Home).Property(actualViewtype),FullscreenWall)">FullscreenWallViewSettings</include>
+		<!-- Bottom Settings -->
+		<!-- Button IDs (1550-1559) -->
+		<!-- InfoPopup Delay -->
+		<control type="button" id="1550">
+			<include>ButtonCommonValues</include>
+			<label>  - $LOCALIZE[303]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$INFO[Skin.String(InfoPopup.Delay),, $LOCALIZE[31090]][/COLOR]</label2>
+			<onclick>$VAR[InfoPopupDelayOnclickVar]</onclick>
+			<visible>[String.IsEqual(Window(Home).Property(actualViewtype),FullscreenWall) + Skin.HasSetting(Enable.FullscreenWallInfoPopup)] | [String.IsEqual(Window(Home).Property(actualViewtype),RightList) + Skin.HasSetting(Enable.RightlistInfoPopup) + Skin.HasSetting(inforightlist)] | [String.IsEqual(Window(Home).Property(actualViewtype),Icons) + Skin.HasSetting(Enable.IconsInfoPopup)] | [String.IsEqual(Window(Home).Property(actualViewtype),BannerWall) + Skin.HasSetting(Disable.BannerWallInfo) + Skin.HasSetting(Enable.BannerWallInfoPopup)] + !Window.IsActive(music)</visible>
+			<visible>!Container.Content(genres)</visible>
+		</control>
+		<!-- HD/SD/3D Indicators -->
+		<control type="button" id="1551">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31607]</label>
+			<label2>[COLOR $VAR[ThemeLabelColor]]$VAR[DisableHDIndicatorsLabelVar][/COLOR]</label2>
+			<onclick condition="String.IsEqual(Window(Home).Property(actualViewtype),List)">Skin.ToggleSetting(noindicatorlist)</onclick>
+			<onclick condition="String.IsEqual(Window(Home).Property(actualViewtype),FanartList)">Skin.ToggleSetting(noindicatorfanartlist)</onclick>
+			<onclick condition="String.IsEqual(Window(Home).Property(actualViewtype),Wall)">Skin.ToggleSetting(noindicatorwall)</onclick>
+			<onclick condition="String.IsEqual(Window(Home).Property(actualViewtype),Gallery)">Skin.ToggleSetting(noindicatorgallery)</onclick>
+			<onclick condition="String.IsEqual(Window(Home).Property(actualViewtype),BigList)">Skin.ToggleSetting(noindicatorbiglist)</onclick>
+			<visible>Window.IsMedia + !Window.IsVisible(addonbrowser) + !Window.IsVisible(favouritesbrowser)</visible>
+			<visible>[String.IsEqual(Window(Home).Property(actualViewtype),List)] | [String.IsEqual(Window(Home).Property(actualViewtype),FanartList)] | [String.IsEqual(Window(Home).Property(actualViewtype),BigList)] | [String.IsEqual(Window(Home).Property(actualViewtype),Gallery)]</visible>
+			<visible>!Window.IsActive(music) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(genres) + !Container.Content(sets)</visible>
+		</control>
+	</include>
+	<include name="BackgroundSettingsButtons">
+		<control type="radiobutton" id="1500">
+			<description>Fanart</description>
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[20445]</label>
+			<onclick>Skin.ToggleSetting(Disable.Fanart)</onclick>
+			<selected>!Skin.HasSetting(Disable.Fanart)</selected>
+			<visible>Window.IsMedia + !Window.IsVisible(favouritesbrowser)</visible>
+		</control>
+		<control type="radiobutton" id="1501">
+			<description>Extrafanart</description>
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31020]</label>
+			<onclick>Skin.ToggleSetting(Disable.Extrafanart)</onclick>
+			<selected>!Skin.HasSetting(Disable.Extrafanart)</selected>
+			<enable>!Skin.HasSetting(Disable.Fanart)</enable>
+			<visible>Window.IsMedia + !Window.IsVisible(favouritesbrowser)</visible>
+		</control>
+		<control type="button" id="1502">
+			<description>Fallback</description>
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31117]: $VAR[BackgroundLabelVar]</label>
+			<onclick>Skin.Reset(ItemToEdit.MultiFanart)</onclick>
+			<onclick>$VAR[FallbackBackgroundOnclickVar]</onclick>
+			<onclick>SetProperty(CustomSelect,fallbackbackground,Home)</onclick>
+			<onclick>ActivateWindow(1129)</onclick>
+		</control>
+	</include>
+	<include name="ViewSelection">
+		<control type="button" id="1500">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[535]</label>
+			<onclick>Container.SetViewMode(50)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1501">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31510]</label>
+			<onclick>Container.SetViewMode(513)</onclick>
+			<visible>Window.IsActive(music)</visible>
+			<visible>[Container.Content(artists) | Container.Content(albums)] + !Skin.HasSetting(Disable.JukeBox)</visible>
+		</control>
+		<control type="button" id="1502">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31238]</label>
+			<onclick>Container.SetViewMode(508)</onclick>
+			<visible>Window.IsActive(music)</visible>
+			<visible>Container.Content(songs) + !Skin.HasSetting(Disable.SongListView)</visible>
+		</control>
+		<control type="button" id="1503">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31239]</label>
+			<onclick>Container.SetViewMode(506)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1504">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31239]</label>
+			<onclick>Container.SetViewMode(506)</onclick>
+			<visible>Window.IsActive(music)</visible>
+			<visible>!Skin.HasSetting(Disable.RightListView)</visible>
+		</control>
+		<control type="button" id="1505">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31240]</label>
+			<onclick>Container.SetViewMode(510)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1506">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31241]</label>
+			<onclick>Container.SetViewMode(501)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1507">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31241]</label>
+			<onclick>Container.SetViewMode(501)</onclick>
+			<visible>Window.IsActive(music)</visible>
+			<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(files)] + !Skin.HasSetting(Disable.LowListView)</visible>
+		</control>
+		<control type="button" id="1508">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31241]</label>
+			<onclick>Container.SetViewMode(501)</onclick>
+			<visible>Window.IsActive(programs)</visible>
+			<visible>String.Contains(Container.FolderPath,plugin.program.advanced.launcher) + !Skin.HasSetting(Disable.LowListView)</visible>
+		</control>
+		<control type="button" id="1509">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31242]</label>
+			<onclick>Container.SetViewMode(507)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1510">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31242]</label>
+			<onclick>Container.SetViewMode(507)</onclick>
+			<visible>Window.IsActive(music)</visible>
+			<visible>[Container.Content(albums) | Container.Content(artists)] + !Skin.HasSetting(Disable.BigListView)</visible>
+		</control>
+		<control type="button" id="1511">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31606]</label>
+			<onclick>Container.SetViewMode(59)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1512">
+			<include>ButtonCommonValues</include>
+			<label>[CAPITALIZE]$LOCALIZE[36906][/CAPITALIZE]</label>
+			<onclick>Container.SetViewMode(502)</onclick>
+			<visible>Window.IsActive(videos)</visible>
+			<visible>Container.Content(episodes) + !Skin.HasSetting(Disable.EpisodeView)</visible>
+		</control>
+		<control type="button" id="1513">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31077]</label>
+			<onclick>Container.SetViewMode(53)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1514">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31079]</label>
+			<onclick>Container.SetViewMode(57)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1515">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31079]</label>
+			<onclick>Container.SetViewMode(57)</onclick>
+			<visible>Window.IsActive(programs)</visible>
+			<visible>String.Contains(Container.FolderPath,plugin.program.advanced.launcher) + !Skin.HasSetting(Disable.LowListView)</visible>
+		</control>
+		<control type="button" id="1516">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31243]</label>
+			<onclick>Container.SetViewMode(56)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1517">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31077]</label>
+			<onclick>Container.SetViewMode(54)</onclick>
+			<visible>!Window.IsActive(videos) + !Window.IsActive(musicplaylist)</visible>
+			<visible>[Container.Content(addons) | Container.Content(albums) | Container.Content(songs) | Container.Content(artists) | Container.Content(genres) | Container.Content(years) | Window.IsActive(pictures) | Container.Content(files)] + !Skin.HasSetting(Disable.ShowCaseView)</visible>
+		</control>
+		<control type="button" id="1518">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31244]</label>
+			<onclick>Container.SetViewMode(509)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1519">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31078]</label>
+			<onclick>Container.SetViewMode(55)</onclick>
+			<visible>Window.IsActive(videos)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets)] + !Skin.HasSetting(Disable.TriPanelView)</visible>
+		</control>
+		<control type="button" id="1520">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31078]</label>
+			<onclick>Container.SetViewMode(55)</onclick>
+			<visible>[Window.IsActive(music) | Window.IsActive(addonbrowser)]</visible>
+			<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Container.Content(addons) | Window.IsActive(music) + Container.Content(files)] + !Skin.HasSetting(Disable.TriPanelView)</visible>
+		</control>
+		<control type="button" id="1521">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31078]</label>
+			<onclick>Container.SetViewMode(55)</onclick>
+			<visible>Window.IsActive(programs)</visible>
+			<visible>String.Contains(Container.FolderPath,plugin.program.advanced.launcher) + !Skin.HasSetting(Disable.TriPanelView)</visible>
+		</control>
+		<control type="button" id="1522">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[536]</label>
+			<onclick>Container.SetViewMode(500)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1523">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31245]</label>
+			<onclick>Container.SetViewMode(503)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1524">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31245]</label>
+			<onclick>Container.SetViewMode(503)</onclick>
+			<visible>Window.IsActive(music)</visible>
+			<visible>[Container.Content(artists) | Container.Content(albums) | Container.Content(genres) | Container.Content(files) + !Skin.HasSetting(Disable.WallView)]</visible>
+		</control>
+		<control type="button" id="1525">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31246]</label>
+			<onclick>Container.SetViewMode(511)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1526">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31246]</label>
+			<onclick>Container.SetViewMode(511)</onclick>
+			<visible>Window.IsActive(music)</visible>
+			<visible>[Container.Content(artists) | Container.Content(albums)] | [Window.IsActive(music) + Container.Content(files)] + !Skin.HasSetting(Disable.FullscreenWallView)</visible>
+		</control>
+		<control type="button" id="1527">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31247]</label>
+			<onclick>Container.SetViewMode(51)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1528">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31247]</label>
+			<onclick>Container.SetViewMode(51)</onclick>
+			<visible>Window.IsActive(music) | Window.IsActive(addonbrowser) | Window.IsActive(programs)</visible>
+			<visible>[Container.Content(albums) | Container.Content(artists) | Container.Content(addons)]</visible>
+			<visible>!Skin.HasSetting(Disable.InfoWallView)</visible>
+		</control>
+		<control type="button" id="1529">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31088]</label>
+			<onclick>Container.SetViewMode(58)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1530">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31076]</label>
+			<onclick>Container.SetViewMode(52)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1531">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31249]</label>
+			<onclick>Container.SetViewMode(512)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1532">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31251]</label>
+			<onclick>Container.SetViewMode(504)</onclick>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="1533">
+			<include>ButtonCommonValues</include>
+			<label>$LOCALIZE[31314]</label>
+			<onclick>Container.SetViewMode(505)</onclick>
+			<visible>false</visible>
+		</control>
+	</include>
+</includes>

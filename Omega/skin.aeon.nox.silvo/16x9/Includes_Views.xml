@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include file="View_50_List.xml" />
+	<include file="View_51_InfoWall.xml" />
+	<include file="View_52_Landscape.xml" />
+	<include file="View_53_ShowCase.xml" />
+	<include file="View_54_ShowCase.xml" />
+	<include file="View_55_TriPanel.xml" />
+	<include file="View_56_Posters.xml" />
+	<include file="View_57_Shift.xml" />
+	<include file="View_58_BannerWall.xml" />
+	<include file="View_59_Logo.xml" />
+	<include file="View_500_Icons.xml" />
+	<include file="View_501_LowList.xml" />
+	<include file="View_502_Episode.xml" />
+	<include file="View_503_Wall.xml" />
+	<include file="View_504_Gallery.xml" />
+	<include file="View_505_Panel.xml" />
+	<include file="View_506_RightList.xml" />
+	<include file="View_507_BigList.xml" />
+	<include file="View_508_SongList.xml" />
+	<include file="View_509_MyFlix.xml" />
+	<include file="View_510_FanartList.xml" />
+	<include file="View_511_Fullscreen_Wall.xml" />
+	<include file="View_512_BigFan.xml" />
+	<include file="View_513_Music_JukeBox.xml" />
+	<!-- <include file="View_514_SlimList.xml" /> -->
+	<include name="BackPanel">
+		<param name="texture" default="colors/black.png" />
+		<param name="border" default="4" />
+		<param name="borderdiffuse" default="$VAR[ThemeBorderColor]" />
+		<param name="visible" default="true" />
+		<definition>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture border="$PARAM[border]">$PARAM[texture]</texture>
+				<bordersize>$PARAM[border]</bordersize>
+				<bordertexture border="$PARAM[border]" infill="false" colordiffuse="$PARAM[borderdiffuse]">colors/white.png</bordertexture>
+				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="BackInfoPanel">
+		<control type="image">
+			<left>$PARAM[left]</left>
+			<top>$PARAM[top]</top>
+			<width>$PARAM[width]</width>
+			<height>$PARAM[height]</height>
+			<texture colordiffuse="BFFFFFFF" border="40">back_infopanel.png</texture>
+			<visible>$PARAM[visible]</visible>
+			<!-- <include>VisibleFadeAnimation</include> -->
+		</control>
+	</include>
+	<include name="InfoPanelLabel">
+		<param name="visible" default="true" />
+		<definition>
+			<control type="group">
+				<visible>$PARAM[visible]</visible>
+				<width>$PARAM[width]</width>
+				<height>60</height>
+				<control type="label">
+					<width>50</width>
+					<height>60</height>
+					<font>IconMediaMenuButtons</font>
+					<label>$PARAM[icon]</label>
+				</control>
+				<control type="label">
+					<left>60</left>
+					<width max="$PARAM[max_width]">auto</width>
+					<height>60</height>
+					<font>font14</font>
+					<textcolor>grey</textcolor>
+					<scroll>true</scroll>
+					<label>$PARAM[label]</label>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="NextAiredGenreLeft">
+		<control type="group">
+			<left>$PARAM[pos]</left>
+			<top>$PARAM[top]</top>
+			<visible>$PARAM[visible]</visible>
+			<include>ViewAnimation</include>
+			<!-- Next Aired + Genre -->
+			<control type="group">
+				<height>80</height>
+				<!-- <visible>![Container.OnNext | Container.OnPrevious] + !Control.IsVisible(512) | Control.IsVisible(512)</visible>
+				<animation effect="fade" time="250" delay="300">Visible</animation> -->
+				<animation effect="slide" end="20" condition="Control.IsVisible(50) + Skin.HasSetting(Enable.SlimList)">Conditional</animation>
+				<animation effect="slide" end="-36" condition="Control.IsVisible(506)">Conditional</animation>
+				<animation effect="slide" end="240,-100" condition="Control.IsVisible(512)">Conditional</animation>
+				<!-- Next Aired -->
+				<control type="group">
+					<visible>![Control.IsVisible(50) + !Skin.HasSetting(Enable.SlimList)]</visible>
+					<visible>[!String.IsEmpty(ListItem.Status) | !String.IsEmpty(Container(9143).ListItem.Status)] + !Container.Content(movies)</visible>
+					<width>700</width>
+					<height>40</height>
+					<control type="label">
+						<left>40</left>
+						<width max="$PARAM[max_width]">auto</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+						<scroll>true</scroll>
+						<label>[B]$VAR[NextAiredSubLabelVar][/B]</label>
+					</control>
+					<control type="togglebutton">
+						<width>40</width>
+						<height>40</height>
+						<font>IconTinyMD</font>
+						<textcolor>grey</textcolor>
+						<include>NoFocusObject</include>
+						<label></label>
+						<altlabel></altlabel>
+						<usealttexture>!String.IsEmpty(Container(9143).ListItem.Property(Next_Aired.Name))</usealttexture>
+					</control>
+				</control>
+				<!-- Genre -->
+				<control type="group">
+					<top>34</top>
+					<width>700</width>
+					<visible>![Control.IsVisible(50) + !Skin.HasSetting(Enable.SlimList)]</visible>
+					<visible>!String.IsEmpty(ListItem.Genre) | ListItem.IsCollection + [!String.IsEmpty(Container(4501).ListItem.Property(genre.collection)) | !String.IsEmpty(Container(4500).ListItem(0).Genre)]</visible>
+					<control type="label">
+						<left>40</left>
+						<width max="$PARAM[max_width]">auto</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+						<scroll>true</scroll>
+						<label>[B]$VAR[VideoGenreVar][/B]</label>
+					</control>
+					<control type="label">
+						<width>40</width>
+						<height>40</height>
+						<font>IconTinyMD</font>
+						<textcolor>grey</textcolor>
+						<label></label>
+					</control>
+				</control>
+				<!-- List View -->
+				<control type="group">
+					<visible>Control.IsVisible(50) + !Skin.HasSetting(Enable.SlimList) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					<width>700</width>
+					<height>40</height>
+					<control type="label">
+						<left>40</left>
+						<width max="700">auto</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+						<scroll>true</scroll>
+						<label>[B]$VAR[VideoInfoTVSubtitleVar][/B]</label>
+					</control>
+					<control type="label">
+						<width>40</width>
+						<height>40</height>
+						<font>IconTinyMD</font>
+						<textcolor>grey</textcolor>
+						<label></label>
+					</control>
+					<control type="group">
+						<top>34</top>
+						<control type="label">
+							<left>40</left>
+							<width max="700">auto</width>
+							<height>40</height>
+							<font>font12</font>
+							<textcolor>grey</textcolor>
+							<scroll>true</scroll>
+							<label>[B]$VAR[NextAiredLabelVar][/B]</label>
+						</control>
+						<control type="togglebutton">
+							<left>-3</left>
+							<width>40</width>
+							<height>40</height>
+							<font>IconSmallMD</font>
+							<include>NoFocusObject</include>
+							<label></label>
+							<altlabel></altlabel>
+							<usealttexture>String.IsEmpty(Container(9143).ListItem.Property(Next_Aired)) + !String.IsEmpty(Container(9143).ListItem.Property(Last_Aired))</usealttexture>
+						</control>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="NextAiredGenreRight">
+		<control type="group">
+			<right>$PARAM[pos]</right>
+			<top>$PARAM[top]</top>
+			<width>650</width>
+			<visible>$PARAM[visible]</visible>
+			<include>ViewAnimation</include>
+			<!-- Next Aired + Genre -->
+			<control type="group">
+				<width>650</width>
+				<height>80</height>
+				<animation effect="slide" end="100,10" condition="Control.IsVisible(56)">Conditional</animation>
+				<animation effect="slide" end="114" condition="Control.IsVisible(57)">Conditional</animation>
+				<animation effect="slide" end="0,16" condition="Control.IsVisible(57) + Skin.HasSetting(Enable.Shift.Small)">Conditional</animation>
+				<!-- <visible>![Container.OnNext | Container.OnPrevious] | Container.Content(seasons)</visible>
+				<animation effect="fade" time="250" delay="300" condition="!Container.Content(seasons)">Visible</animation> -->
+				<!-- Next Aired -->
+				<control type="group">
+					<visible>!Control.IsVisible(56) + ![String.IsEmpty(ListItem.Status) + String.IsEmpty(Container(9143).ListItem.Status)] + !Container.Content(movies) + ![Container.Content(episodes) + !String.IsEmpty(ListItem.Director)]</visible>
+					<animation effect="fade" time="250" delay="300">Visible</animation>
+					<width>650</width>
+					<height>40</height>
+					<control type="label">
+						<right>40</right>
+						<width max="$PARAM[max_width]">auto</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+						<align>right</align>
+						<scroll>true</scroll>
+						<label>[B]$VAR[NextAiredSubLabelVar][/B]</label>
+					</control>
+					<control type="togglebutton">
+						<right>0</right>
+						<width>40</width>
+						<height>40</height>
+						<font>IconTinyMD</font>
+						<textcolor>grey</textcolor>
+						<align>right</align>
+						<include>NoFocusObject</include>
+						<label></label>
+						<altlabel></altlabel>
+						<usealttexture>!String.IsEmpty(Container(9143).ListItem.Property(Next_Aired.Name))</usealttexture>
+					</control>
+				</control>
+				<!-- Year -->
+				<control type="group">
+					<visible>Control.IsVisible(56) + !String.IsEmpty(ListItem.Year) + Container.Content(seasons)</visible>
+					<width>650</width>
+					<height>40</height>
+					<control type="label">
+						<right>40</right>
+						<width max="$PARAM[max_width]">auto</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+						<align>right</align>
+						<scroll>true</scroll>
+						<label>[B]$INFO[ListItem.Year][/B]</label>
+					</control>
+					<control type="label">
+						<right>0</right>
+						<width>40</width>
+						<height>40</height>
+						<font>IconTinyMD</font>
+						<align>right</align>
+						<label></label>
+					</control>
+				</control>
+				<!-- Director -->
+				<control type="group">
+					<visible>!String.IsEmpty(ListItem.Director) | !String.IsEmpty(Container(4501).ListItem.Property(director.collection))</visible>
+					<width>650</width>
+					<height>40</height>
+					<control type="label">
+						<right>40</right>
+						<width max="$PARAM[max_width]">auto</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+						<align>right</align>
+						<scroll>true</scroll>
+						<label>[B]$VAR[VideoDirectorVar][/B]</label>
+					</control>
+					<control type="label">
+						<right>0</right>
+						<width>40</width>
+						<height>40</height>
+						<font>IconTinyMD</font>
+						<align>right</align>
+						<label></label>
+					</control>
+				</control>
+				<!-- Genre -->
+				<control type="group">
+					<top>34</top>
+					<width>650</width>
+					<height>40</height>
+					<visible>!String.IsEmpty(ListItem.Genre) | ListItem.IsCollection + [!String.IsEmpty(Container(4501).ListItem.Property(genre.collection)) | !String.IsEmpty(Container(4500).ListItem(0).Genre)]</visible>
+					<control type="label">
+						<right>40</right>
+						<width max="$PARAM[max_width]">auto</width>
+						<height>40</height>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+						<align>right</align>
+						<scroll>true</scroll>
+						<label>[B]$VAR[VideoGenreVar][/B]</label>
+					</control>
+					<control type="label">
+						<right>0</right>
+						<width>40</width>
+						<height>40</height>
+						<font>IconTinyMD</font>
+						<textcolor>grey</textcolor>
+						<align>right</align>
+						<label></label>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="PosterStatusOverlay">
+		<param name="texture" default="$VAR[OverlayVar]" />
+		<definition>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<width>$PARAM[size]</width>
+				<height>$PARAM[size]</height>
+				<texture>$PARAM[texture]</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>$PARAM[visible]</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="UnwatchedEpisodeOverlay">
+		<param name="left" default="0" />
+		<param name="top" default="0" />
+		<param name="height" default="40" />
+		<param name="label" default="$INFO[ListItem.Property(UnWatchedEpisodes)]" />
+		<param name="visible" default="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)" />
+		<definition>
+			<control type="group">
+				<visible>[Container.Content(tvshows) | Container.Content(seasons)] + $PARAM[visible]</visible>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<control type="image">
+					<width>40</width>
+					<height>$PARAM[height]</height>
+					<texture>overlays/OverlayEpisodes.png</texture>
+				</control>
+				<control type="label">
+					<left>-2</left>
+					<width>40</width>
+					<height>$PARAM[height]</height>
+					<align>center</align>
+					<font>font10</font>
+					<textcolor>white</textcolor>
+					<scroll>false</scroll>
+					<label>[B]$PARAM[label][/B]</label>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="ListStatusIndicators">
+		<param name="visible" default="true" />
+		<definition>
+			<control type="group">
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<visible>$PARAM[visible]</visible>
+				<control type="label">
+					<left>7</left>
+					<width>64</width>
+					<height>64</height>
+					<textcolor>white3</textcolor>
+					<font>IconMediumMD</font>
+					<label>[LIGHT]$VAR[ListItemOverlay][/LIGHT]</label>
+				</control>
+				<control type="label">
+					<width>64</width>
+					<height>64</height>
+					<font>font12_title</font>
+					<align>center</align>
+					<label>$VAR[ListItemOverlayShowsVar]</label>
+					<textcolor>grey3</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+</includes>

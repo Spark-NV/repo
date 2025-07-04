@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1127" type="dialog">
+	<defaultcontrol always="true">90100</defaultcontrol>
+	<controls>
+		<include content="DimBackground">
+			<param name="texture">colors/black75.png</param>
+		</include>
+		<control type="group">
+			<left>457</left>
+			<top>240</top>
+			<include>DialogOpenCloseAnimation</include>
+			<include content="BackPanel">
+				<param name="left">184</param>
+				<param name="top">16</param>
+				<param name="width">638</param>
+				<param name="height">478</param>
+			</include>
+			<control type="label">
+				<left>30</left>
+				<top>32</top>
+				<width>940</width>
+				<height>40</height>
+				<font>font15_title</font>
+				<label>$LOCALIZE[31188]</label>
+				<align>center</align>
+				<textcolor>dialogheader</textcolor>
+			</control>
+			<control type="list" id="90100">
+				<left>189</left>
+				<top>88</top>
+				<width>628</width>
+				<height>480</height>
+				<onup>90100</onup>
+				<ondown>90100</ondown>
+				<onleft>90100</onleft>
+				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<itemlayout height="100" width="628">
+					<control type="label">
+						<left>110</left>
+						<width>520</width>
+						<height>100</height>
+						<textoffsetx>15</textoffsetx>
+						<font>font14</font>
+						<textcolor>grey2</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="image">
+						<top>20</top>
+						<left>20</left>
+						<width>60</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="image">
+						<left>518</left>
+						<top>18</top>
+						<width>120</width>
+						<height>76</height>
+						<texture colordiffuse="$INFO[ListItem.Property(color_diffuse)]">$INFO[ListItem.Property(Radio)]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="100" width="628">
+					<control type="image">
+						<width>629</width>
+						<height>100</height>
+						<texture colordiffuse="$VAR[HighlightBarColor]" border="5">colors/white50.png</texture>
+						<visible>Control.HasFocus(90100)</visible>
+						<include>VisibleFadeAnimation</include>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<width>520</width>
+						<height>100</height>
+						<textoffsetx>15</textoffsetx>
+						<font>font14</font>
+						<scroll>true</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(90100)">Conditional</animation>
+					</control>
+					<control type="image">
+						<top>20</top>
+						<left>20</left>
+						<width>60</width>
+						<height>60</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="image">
+						<left>518</left>
+						<top>18</top>
+						<width>120</width>
+						<height>76</height>
+						<texture colordiffuse="$INFO[ListItem.Property(color_diffuse)]">$INFO[ListItem.Property(Radio)]</texture>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>$LOCALIZE[13404]</label>
+						<icon>overlays/resumable.png</icon>
+						<onclick>Skin.SetBool(Disable.Resumable)</onclick>
+						<property name="Radio">android/radio_on.png</property>
+						<property name="color_diffuse">$VAR[ThemeLabelColor]</property>
+						<visible>!Skin.HasSetting(Disable.Resumable)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[13404]</label>
+						<icon>overlays/resumable.png</icon>
+						<onclick>Skin.Reset(Disable.Resumable)</onclick>
+						<property name="Radio">android/radio_off.png</property>
+						<property name="color_diffuse">grey</property>
+						<visible>Skin.HasSetting(Disable.Resumable)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[16102]</label>
+						<icon>overlays/OverlayWatched.png</icon>
+						<onclick>Skin.SetBool(Disable.OverlayWatched)</onclick>
+						<property name="Radio">android/radio_on.png</property>
+						<property name="color_diffuse">$VAR[ThemeLabelColor]</property>
+						<visible>!Skin.HasSetting(Disable.OverlayWatched)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[16102]</label>
+						<icon>overlays/OverlayWatched.png</icon>
+						<onclick>Skin.Reset(Disable.OverlayWatched)</onclick>
+						<property name="Radio">android/radio_off.png</property>
+						<property name="color_diffuse">grey</property>
+						<visible>Skin.HasSetting(Disable.OverlayWatched)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[16101]</label>
+						<icon>overlays/OverlayUnwatched.png</icon>
+						<onclick>Skin.SetBool(Disable.OverlayUnwatched)</onclick>
+						<property name="Radio">android/radio_on.png</property>
+						<property name="color_diffuse">$VAR[ThemeLabelColor]</property>
+						<visible>!Skin.HasSetting(Disable.OverlayUnwatched)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[16101]</label>
+						<icon>overlays/OverlayUnwatched.png</icon>
+						<onclick>Skin.Reset(Disable.OverlayUnwatched)</onclick>
+						<property name="Radio">android/radio_off.png</property>
+						<property name="color_diffuse">grey</property>
+						<visible>Skin.HasSetting(Disable.OverlayUnwatched)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[31109]</label>
+						<icon>dialogs/settings/OverlayEpisodes.png</icon>
+						<onclick>Skin.Reset(Disable.UnwatchedIcon)</onclick>
+						<property name="Radio">android/radio_on.png</property>
+						<property name="color_diffuse">$VAR[ThemeLabelColor]</property>
+						<visible>Skin.HasSetting(Disable.UnwatchedIcon)</visible>
+					</item>
+					<item>
+						<label>$LOCALIZE[31109]</label>
+						<icon>dialogs/settings/OverlayEpisodes.png</icon>
+						<onclick>Skin.SetBool(Disable.UnwatchedIcon)</onclick>
+						<property name="Radio">android/radio_off.png</property>
+						<property name="color_diffuse">grey</property>
+						<visible>!Skin.HasSetting(Disable.UnwatchedIcon)</visible>
+					</item>
+				</content>
+			</control>
+		</control>
+		<include>DebugWindow</include>
+	</controls>
+</window>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">9001</defaultcontrol>
+	<include>DialogOpenCloseAnimation</include>
+	<controls>
+		<control type="group">
+			<left>476</left>
+			<top>381</top>
+			<visible>!Window.IsVisible(selectdialog)</visible>
+			<include>VisibleFadeAnimation</include>
+			<include content="DialogPanel">
+				<param name="icon_visible">false</param>
+				<param name="height">318</param>
+				<param name="header_label">$LOCALIZE[21421]</param>
+				<param name="buttons_ondown">9001</param>
+				<param name="close_onclick">SendClick(19)</param>
+				<param name="ok_onclick">SendClick(18)</param>
+				<param name="ok_visible">Control.IsVisible(18)</param>
+			</include>
+			<control type="button">
+				<description>rules label</description>
+				<top>70</top>
+				<width>1138</width>
+				<label>$LOCALIZE[21422]</label>
+				<disabledcolor>$VAR[ThemeLabelColor]</disabledcolor>
+				<enable>no</enable>
+				<texturefocus />
+			</control>
+			<control type="grouplist" id="9001">
+				<top>130</top>
+				<height>240</height>
+				<onleft>97</onleft>
+				<onright>97</onright>
+				<control type="button" id="15">
+					<description>Rule Field</description>
+					<width>640</width>
+					<textcolor>grey2</textcolor>
+				</control>
+				<control type="group" id="8000">
+					<height>60</height>
+					<control type="button" id="48">
+						<description>Rule operator</description>
+						<width>640</width>
+						<textcolor>grey2</textcolor>
+						<label>$INFO[Control.GetLabel(16), -  ]</label>
+						<onclick>SendClick(16)</onclick>
+						<onleft>97</onleft>
+						<onright>20</onright>
+						<onup>15</onup>
+						<ondown>17</ondown>
+					</control>
+					<control type="button" id="20">
+						<description>Browse Button</description>
+						<left>640</left>
+						<width>320</width>
+						<align>right</align>
+						<label>$LOCALIZE[1024]</label>
+						<onleft>48</onleft>
+						<onright>97</onright>
+						<onup>15</onup>
+						<ondown>17</ondown>
+					</control>
+				</control>
+				<control type="edit" id="17">
+					<description>Value Button</description>
+					<width>960</width>
+					<label />
+					<hinttext>$LOCALIZE[31426]</hinttext>
+					<texturenofocus>colors/white25.png</texturenofocus>
+					<onup>20</onup>
+					<ondown>15</ondown>
+				</control>
+			</control>
+		</control>
+		<control type="button" id="16">
+			<description>Select Operator Button</description>
+			<include>HiddenObject</include>
+		</control>
+		<control type="button" id="18">
+			<description>Ok Button</description>
+			<include>HiddenObject</include>
+		</control>
+		<control type="button" id="19">
+			<description>Cancel Button</description>
+			<include>HiddenObject</include>
+		</control>
+		<include>DebugWindow</include>
+	</controls>
+</window>

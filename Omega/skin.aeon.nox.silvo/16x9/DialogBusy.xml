@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<!-- <onload condition="System.AddonIsEnabled(plugin.video.themoviedb.helper) + String.IsEqual(Skin.String(Viz.Background),4) + Window.IsVisible(visualisation)">RunScript(plugin.video.themoviedb.helper,blur_image=$INFO[Player.Icon],prefix=MusicVisIcon)</onload> -->
+	<controls>
+		<control type="group">
+			<visible>!Window.IsVisible(startup) + String.IsEmpty(Window(Home).Property(script.preshowexperience.running))</visible>
+			<control type="image">
+				<include>FullscreenDimensions</include>
+				<texture>colors/black75.png</texture>
+				<animation effect="fade" time="300">WindowOpen</animation>
+				<animation effect="fade" time="300">WindowClose</animation>
+			</control>
+			<control type="group">
+				<include>DialogOpenCloseAnimation</include>
+				<include content="BusySpinner">
+					<param name="visible">true</param>
+				</include>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="contents512list">
+		<width>1920</width>
+		<height>1080</height>
+		<onup>SetProperty(MediaMenu,True,Home)</onup>
+		<onup>SetFocus(9050)</onup>
+		<onleft>512</onleft>
+		<onright>512</onright>
+		<ondown condition="Control.IsVisible(615)">616</ondown>
+		<ondown condition="!Control.IsVisible(615)">4400</ondown>
+		<orientation>horizontal</orientation>
+		<viewtype label="$LOCALIZE[31249]">list</viewtype>
+		<preloaditems>2</preloaditems>
+		<scrolltime tween="quadratic">200</scrolltime>
+		<visible>!Skin.HasSetting(skinvariables.viewtypes) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)] | Skin.HasSetting(skinvariables.viewtypes) + $EXP[Exp_View_512]</visible>
+		<itemlayout width="1080" height="1920" />
+		<focusedlayout width="1080" height="1920">
+			<control type="group">
+				<animation type="Visible">
+					<effect type="fade" time="120" end="100" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" time="120" start="100" end="0" />
+				</animation>
+				<animation type="WindowOpen">
+					<effect type="fade" time="320" end="100" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="fade" time="240" start="100" end="0" />
+				</animation>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="BigFanList">
+		<control type="fixedlist" id="512">
+			<include>contents512list</include>
+		</control>
+	</include>
+	<include name="View_512_BigFan">
+		<control type="group">
+			<visible>Control.IsVisible(512) + !Window.IsActive(addoninformation)</visible>
+			<include>ViewAnimation</include>
+			<include>BigFanList</include>
+			<control type="image">
+				<top>575</top>
+				<left>20</left>
+				<width>292</width>
+				<height>412</height>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true">$VAR[FocusedPosterThumbVar]</texture>
+				<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+			</control>
+			<include content="PosterStatusOverlay">
+				<param name="left">246</param>
+				<param name="top">595</param>
+				<param name="size">46</param>
+				<param name="visible">!String.IsEmpty(Skin.String(512.Movies.DisableOverlay)) + [Container.Content(movies) | Container.Content(sets)] | [!String.IsEmpty(Skin.String(512.TV.DisableOverlay)) + Container.Content(tvshows)] | [!String.IsEmpty(Skin.String(512.Seasons.DisableOverlay)) + Container.Content(seasons)]</param>
+			</include>
+			<control type="group">
+				<animation effect="slide" end="0,-160" condition="Skin.HasSetting(EnableBigFanPlot)">Conditional</animation>
+				<top>790</top>
+				<left>330</left>
+				<control type="label">
+					<width>1400</width>
+					<height>50</height>
+					<aligny>top</aligny>
+					<font>font16_title_bold</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>shadow</shadowcolor>
+					<scroll>true</scroll>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="group">
+					<top>50</top>
+					<control type="label">
+						<width>60</width>
+						<height>45</height>
+						<font>IconSmallMD</font>
+						<textcolor>grey2</textcolor>
+						<shadowcolor>shadow</shadowcolor>
+						<label></label>
+					</control>
+					<control type="label">
+						<left>40</left>
+						<width>1105</width>
+						<height>43</height>
+						<font>font13_bold</font>
+						<textcolor>grey2</textcolor>
+						<shadowcolor>shadow</shadowcolor>
+						<label>$VAR[FloorSubLabelVar]</label>
+					</control>
+				</control>
+				<control type="group">
+					<top>95</top>
+					<visible>!String.IsEmpty(ListItem.Director) | !String.IsEmpty(Container(4501).ListItem.Property(director.collection))</visible>
+					<control type="label">
+						<width>60</width>
+						<height>45</height>
+						<font>IconSmallMD</font>
+						<textcolor>grey2</textcolor>
+						<shadowcolor>shadow</shadowcolor>
+						<label></label>
+					</control>
+					<control type="label">
+						<left>40</left>
+						<width>1305</width>
+						<height>40</height>
+						<font>font13_bold</font>
+						<textcolor>grey2</textcolor>
+						<shadowcolor>shadow</shadowcolor>
+						<scroll>true</scroll>
+						<label>$VAR[VideoDirectorVar]</label>
+					</control>
+				</control>
+				<control type="group">
+					<top>140</top>
+					<visible>!String.IsEmpty(ListItem.Genre) | !String.IsEmpty(Window(Home).Property(SkinInfo.Set.Movies.Genre)) | !String.IsEmpty(Container(4500).ListItem(0).Genre)</visible>
+					<control type="label">
+						<width>60</width>
+						<height>40</height>
+						<font>IconSmallMD</font>
+						<textcolor>grey2</textcolor>
+						<shadowcolor>shadow</shadowcolor>
+						<label></label>
+					</control>
+					<control type="label">
+						<left>40</left>
+						<width>1305</width>
+						<height>40</height>
+						<font>font13_bold</font>
+						<textcolor>grey2</textcolor>
+						<shadowcolor>shadow</shadowcolor>
+						<scroll>true</scroll>
+						<label>$VAR[VideoGenreVar]</label>
+					</control>
+				</control>
+			</control>
+			<control type="textbox">
+				<top>820</top>
+				<left>330</left>
+				<width>1550</width>
+				<height>148</height>
+				<font>font14_textbox</font>
+				<textcolor>$VAR[ThemeLabelColor]</textcolor>
+				<label>$INFO[ListItem.Tagline,, - ][COLOR grey]$VAR[VideoPlotVar][/COLOR]</label>
+				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll)</autoscroll>
+				<visible>Skin.HasSetting(EnableBigFanPlot)</visible>
+			</control>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<include>NotifyOpenCloseAnimation</include>
+	<controls>
+		<control type="group">
+			<visible>String.IsEmpty(Window(Home).Property(script.preshowexperience.running))</visible>
+			<control type="image">
+				<top>20</top>
+				<width>100%</width>
+				<height>68</height>
+				<texture>shadow.png</texture>
+			</control>
+			<control type="image">
+				<width>100%</width>
+				<height>68</height>
+				<texture>colors/black.png</texture>
+			</control>
+			<control type="image" id="400">
+				<left>20</left>
+				<top>2</top>
+				<width>64</width>
+				<height>64</height>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<left>1828</left>
+				<top>2</top>
+				<width>64</width>
+				<height>64</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[Control.GetLabel(400)]</texture>
+			</control>
+			<control type="fadelabel" id="401">
+				<description>Line 1 Label</description>
+				<left>84</left>
+				<top>0</top>
+				<width>1752</width>
+				<height>30</height>
+				<font>font13_title</font>
+				<textcolor>$VAR[ThemeLabelColor]</textcolor>
+				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
+				<textoffsetx>10</textoffsetx>
+				<align>center</align>
+			</control>
+			<control type="fadelabel" id="402">
+				<description>Line 2 Label</description>
+				<left>84</left>
+				<top>30</top>
+				<width>1752</width>
+				<height>30</height>
+				<font>font13_bold</font>
+				<textcolor>grey</textcolor>
+				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
+				<textoffsetx>10</textoffsetx>
+				<align>center</align>
+			</control>
+		</control>
+	</controls>
+</window>

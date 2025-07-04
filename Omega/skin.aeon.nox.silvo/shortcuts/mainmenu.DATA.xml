@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortcuts>
+	<shortcut>
+		<defaultID>movies</defaultID>
+		<label>20342</label>
+		<label2 />
+		<icon>special://skin/extras/icons/DefaultMovies.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>tvshows</defaultID>
+		<label>20343</label>
+		<label2 />
+		<icon>special://skin/extras/icons/DefaultTVShows.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>livetv</defaultID>
+		<label>31502</label>
+		<label2 />
+		<icon>special://skin/extras/icons/DefaultAddonPVRClient.png</icon>
+		<thumb />
+		<action>ActivateWindow(TVChannels)</action>
+		<visible>false</visible>
+	</shortcut>
+	<shortcut>
+		<defaultID>search</defaultID>
+		<label>137</label>
+		<label2 />
+		<icon>special://skin/extras/icons/DefaultAddonsSearch.png</icon>
+		<thumb />
+		<action>RunScript(script.globalsearch)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>playdisc</defaultID>
+		<label>341</label>
+		<label2 />
+		<icon>special://skin/extras/icons/Disc.png</icon>
+		<thumb />
+		<action>PlayDisc</action>
+		<visible>System.HasMediaDVD</visible>
+	</shortcut>
+</shortcuts>

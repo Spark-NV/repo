@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>9000</defaultcontrol>
+	<onload condition="Control.IsVisible(10)">SetFocus(10)</onload>
+	<controls>
+		<control type="label" id="1">
+			<include>HiddenObject</include>
+		</control>
+		<include>DimBackground</include>
+		<control type="group">
+			<include>DialogOpenCloseAnimation</include>
+			<left>510</left>
+			<top>290</top>
+			<include content="BackPanel">
+				<param name="left">-4</param>
+				<param name="top">-4</param>
+				<param name="width">918</param>
+				<param name="height">508</param>
+			</include>
+			<include condition="Window.IsActive(progressdialog)">DialogProgress</include>
+			<control type="label">
+				<left>2</left>
+				<top>2</top>
+				<width>898</width>
+				<height>60</height>
+				<textoffsetx>15</textoffsetx>
+				<font>font16_title_bold</font>
+				<align>center</align>
+				<textcolor>grey2</textcolor>
+				<label>$INFO[Control.GetLabel(1)]$INFO[System.Progressbar,  -  ,%]</label>
+			</control>
+			<control type="textbox" id="9">
+				<left>45</left>
+				<top>88</top>
+				<width>825</width>
+				<height>290</height>
+				<label />
+				<textcolor>grey2</textcolor>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+			</control>
+			<control type="grouplist" id="9000">
+				<left>20</left>
+				<top>402</top>
+				<width>876</width>
+				<orientation>horizontal</orientation>
+				<align>center</align>
+				<itemgap>5</itemgap>
+				<control type="button" id="11">
+					<description>Yes button</description>
+					<width>287</width>
+					<label>107</label>
+					<font>font15_title</font>
+					<textcolor>grey2</textcolor>
+					<align>center</align>
+				</control>
+				<control type="button" id="10">
+					<description>No button</description>
+					<width>287</width>
+					<label>106</label>
+					<font>font15_title</font>
+					<textcolor>grey2</textcolor>
+					<align>center</align>
+				</control>
+				<control type="button" id="12">
+					<description>Settings button</description>
+					<width>287</width>
+					<font>font15_title</font>
+					<textcolor>grey2</textcolor>
+					<align>center</align>
+				</control>
+			</control>
+		</control>
+		<include>DebugWindow</include>
+	</controls>
+</window>
