@@ -717,10 +717,6 @@ def syncAccounts():
 			homeWindow.setProperty('umbrella.updateSettings', 'true')
 			setSetting('umbrella.colorSecond', 'true')
 			notification('Umbrella', 'Reloading addon due to new settings added.')
-		if setting('umbrella.externalWarning') != 'true':
-			setSetting('umbrella.externalWarning', 'true')
-			from resources.help import help
-			help.get('externalProviders')
 		if setting('context.useUmbrellaContext') == 'true':
 			homeWindow.setProperty('context.umbrella.showUmbrella', '[B][COLOR '+setting('highlight.color')+']Umbrella[/COLOR][/B] - ')
 		else:

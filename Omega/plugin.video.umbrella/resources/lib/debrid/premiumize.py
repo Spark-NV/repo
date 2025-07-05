@@ -119,8 +119,8 @@ class Premiumize:
 			token_ttl -= int(token['interval'])
 		self.progressDialog.close()
 		if success:
-			if fromSettings == 1:
-				control.openSettings('9.1', 'plugin.video.umbrella')
+			#if fromSettings == 1:
+			#	control.openSettings('9.1', 'plugin.video.umbrella')
 			control.notification(message=40052, icon=pm_icon)
 			log_utils.log('Premiumize.me Successfully Authorized', level=log_utils.LOGDEBUG)
 
