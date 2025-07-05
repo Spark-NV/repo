@@ -3,6 +3,13 @@
 	<onload>SetProperty(CurrentSkin,skin.estuary.modv2,home)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onload>
 	<onload>RunScript(skin.estuary.modv2,getKodiSetting,videolibrary.showunwatchedplots)</onload>
+	<!-- Default image resource settings -->
+	<onload>Skin.SetString(moviegenreicons.name,Movie Genres Icons for Estuary MOD V2 Matrix)</onload>
+	<onload>Skin.SetString(moviegenreicons.path,resource://resource.images.moviegenreicons.estuarymod/)</onload>
+	<onload>Skin.SetString(moviegenreicons.ext,.jpg)</onload>
+	<onload>Skin.SetString(studiologos.name,Studio Icons - White)</onload>
+	<onload>Skin.SetString(studiologos.path,resource://resource.images.studios.white/)</onload>
+	<onload>Skin.SetString(studiologos.ext,.png)</onload>
 	<defaultcontrol>9000</defaultcontrol>
 	<backgroundcolor>background</backgroundcolor>
 	<controls>
