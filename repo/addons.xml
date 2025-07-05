@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <addons>
 <addon id="script.module.cocoscrapers" name="CocoScrapers Module" version="1.0.37" provider-name="CocoJoe">
 	<requires>
@@ -28,6 +28,7 @@
 		<news></news>
 	</extension>
 </addon>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.globalsearch" name="Global Search" version="9.0.7" provider-name="ronie">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -108,6 +109,7 @@
 - add videoresolution flag</news>
 	</extension>
 </addon>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.module.pvr.artwork" name="PVR Artwork Module" version="2.2.9" provider-name="PvD">
     <requires>
 	    <import addon="xbmc.python" version="3.0.0"/>
@@ -440,7 +442,7 @@ For a complete view of changes visit https://github.com/b-jesch/skin.estuary.mod
         </news>
 	</extension>
 </addon>
-﻿
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="resource.images.moviegenreicons.estuarymod" name="Movie Genres Icons for Estuary MOD V2 Matrix" version="1.0.4" provider-name="Guilouz">
 	<extension point="kodi.resource.images" compile="true" type="moviegenreicons" />
 	<requires>
@@ -464,6 +466,7 @@ For a complete view of changes visit https://github.com/b-jesch/skin.estuary.mod
 		<news>[B]1.0.4[/B][CR]• Fix accented characters[CR][CR][B]1.0.3[/B][CR]• Fix accented characters[CR][CR][B]1.0.2[/B][CR]• Remove Textures.xbt[CR][CR][B]1.0.1[/B][CR]• Add Spanish genres[CR][CR][B]1.0.0[/B][CR]• Initial release[CR][CR]</news>
 	</extension>
 </addon>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="service.subtitles.a4ksubtitles"
        name="a4kSubtitles"
        version="3.21.1"
@@ -807,6 +810,7 @@ Supports: OpenSubtitles, BSPlayer, Podnadpisi.NET, SubDL, Addic7ed
         </news>
     </extension>
 </addon>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.module.requests" name="requests" version="2.31.0" provider-name="Python Software Foundation">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>

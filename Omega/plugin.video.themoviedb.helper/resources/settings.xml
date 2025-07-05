@@ -813,12 +813,12 @@
             <group id="5" label="25000">
                 <setting id="startup_notifications" type="boolean" label="32468" help="">
                     <level>0</level>
-                    <default>True</default>
+                    <default>false</default>
                     <control type="toggle"/>
                 </setting>
                 <setting id="sync_notifications" type="boolean" label="32534" help="">
                     <level>0</level>
-                    <default>True</default>
+                    <default>false</default>
                     <control type="toggle"/>
                 </setting>
                 <setting id="connection_notifications" type="boolean" label="32471" help="">

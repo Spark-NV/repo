@@ -469,7 +469,7 @@
 						<description>Update library</description>
 						<include>MediaMenuItemsCommon</include>
 						<label>$LOCALIZE[653]</label>
-						<onclick>RunScript(script.tmdb.helper,library_update)</onclick>
+						<onclick>RunScript(plugin.video.themoviedb.helper, library_autoupdate)</onclick>
 						<visible>!Container.Content(addons)+ String.IsEmpty(Container.PluginName)</visible>
 						<altlabel>$LOCALIZE[13353]</altlabel>
 						<usealttexture>library.isscanningvideo</usealttexture>
