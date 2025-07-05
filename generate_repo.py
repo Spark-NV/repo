@@ -8,6 +8,15 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 import subprocess
 
+def clear_directory(directory):
+    """Delete all contents of a directory, but not the directory itself."""
+    for filename in os.listdir(directory):
+        file_path = os.path.join(directory, filename)
+        if os.path.isfile(file_path) or os.path.islink(file_path):
+            os.unlink(file_path)
+        elif os.path.isdir(file_path):
+            shutil.rmtree(file_path)
+
 def remove_pycache_dirs(root_dir='.'):
     """Recursively remove all __pycache__ directories."""
     for dirpath, dirnames, filenames in os.walk(root_dir):
@@ -72,7 +81,11 @@ def git_commit_and_push():
 
 def main():
     # Remove __pycache__ directories before proceeding
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    repo_dir = os.path.join(script_dir, 'repo')
+
     remove_pycache_dirs('.')
+    clear_directory(repo_dir)
 
     zips_dir = 'repo/zips'
     os.makedirs(zips_dir, exist_ok=True)

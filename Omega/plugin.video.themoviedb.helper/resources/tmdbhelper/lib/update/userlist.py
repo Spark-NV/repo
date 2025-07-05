@@ -75,9 +75,7 @@ def monitor_userlist():
     set_setting('monitor_userlist', added_lists, 'str')
     set_setting('monitor_userslug', added_users, 'str')
 
-    # Update library?
-    if Dialog().yesno(get_localized(653), get_localized(32132)):
-        library_autoupdate(list_slugs=added_lists, user_slugs=added_users, busy_spinner=True)
+    library_autoupdate(list_slugs=added_lists, user_slugs=added_users, busy_spinner=True)
 
 
 def library_autoupdate(list_slugs=None, user_slugs=None, busy_spinner=False, force=False):
