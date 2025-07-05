@@ -458,7 +458,7 @@
 						<label>$LOCALIZE[20336]</label>
 						<onclick>mastermode</onclick>
 						<selected>system.ismaster</selected>
-						<visible>system.haslocks</visible>
+						<visible>false</visible>
 					</control>
 					<control type="button" id="8">
 						<include>MediaMenuItemsCommon</include>
