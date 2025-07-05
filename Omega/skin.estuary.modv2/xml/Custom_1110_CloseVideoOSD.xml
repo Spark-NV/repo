@@ -1,6 +1,7 @@
 <window id="1110" type="dialog">
+    <visible>!Skin.HasSetting(touchmode)</visible>
     <visible>System.IdleTime(5)</visible>
-    <visible>[Window.IsVisible(videoosd) | Window.IsVisible(musicosd) | Window.IsVisible(1133)] + !WindowIsVisible(pvrosdteletext) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(DialogSubtitles.xml) + !Windows.IsVisible(DialogSlider.xml) + !Window.IsVisible(VideoOSDBookmarks.xml) + !Window.IsVisible(Custom_1101_SettingsList.xml) + !Window.IsVisible(DialogPlayerProcessInfo.xml) + !Window.IsVisible(1138) + !Window.IsVisible(1139) + !Window.IsVisible(1122)</visible>
+    <visible>[Window.IsVisible(videoosd) | Window.IsVisible(musicosd) | Window.IsVisible(1133)] + !Window.IsVisible(pvrosdteletext) + !Window.IsVisible(DialogSettings.xml) + !Window.IsVisible(DialogSubtitles.xml) + !Window.IsVisible(DialogSlider.xml) + !Window.IsVisible(VideoOSDBookmarks.xml) + !Window.IsVisible(Custom_1101_SettingsList.xml) + !Window.IsVisible(DialogPlayerProcessInfo.xml) + !Window.IsVisible(1138) + !Window.IsVisible(1139) + !Window.IsVisible(1122)</visible>
     <onload condition="Window.IsVisible(videoosd)">Dialog.Close(videoosd)</onload>
     <onload condition="Window.IsVisible(musicosd)">Dialog.Close(musicosd)</onload>
     <controls/>
