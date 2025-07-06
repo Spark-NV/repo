@@ -57,6 +57,14 @@
         <visible>!Library.HasContent(tvshows)</visible>
     </shortcut>
     <shortcut>
+        <label>Youtube</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>youtube</defaultID>
+        <icon>icons/sidemenu/youtube.png</icon>
+        <action>StartAndroidActivity(com.liskovsoft.smartyoutubetv2.common)</action>
+        <visible>True</visible>
+    </shortcut>
+    <shortcut>
         <label>2</label>
         <label2>Common Shortcut</label2>
         <defaultID>music</defaultID>
